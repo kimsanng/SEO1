@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+
+#mypage .dashboard .board_left{
+			width: 20%;
+			background-color: var(--light-blue);
+			padding-bottom: 100px;
+		}
+		#mypage .dashboard .board_left .member_profile{
+			margin-top: 100px;
+			text-align: center;
+		}
+		#mypage .dashboard .board_left .member_icon{
+			display: inline-block;
+			width: 130px; height: 130px;
+			border-radius: 50%;
+
+			position: relative;
+			overflow: hidden;
+
+			/* background: url(/img/profile.png) no-repeat;
+			background-size: cover;
+			background-position: center; */
+
+		}
+			#mypage .dashboard .board_left .member_icon img{
+				width: 100%;
+				position: absolute;
+				top: 50%; left: 50%; 
+				transform: translate(-50%,-50%);
+			}
+		#mypage .dashboard .board_left .member_name{
+			margin-top: 20px;
+			font-size: 1.25rem;
+		}
+		#mypage .dashboard .board_left .member_name strong{
+			font-weight: 700; font-size: inherit;
+		}
+
+		#mypage .dashboard .board_left .member_cash{
+			margin-top: 15px; font-size: 1rem;
+
+			display: flex; align-items: center; justify-content: center;
+		}
+		#mypage .dashboard .board_left .member_cash span{
+			display: inline-block; margin-right: 5px;
+			font-size: 0.9375rem;
+			font-weight: 600; background-color: var(--yellow);
+			padding: 4px 12px; border-radius: 30px;
+			color: var(--white);
+
+		}
+		#mypage .dashboard .board_left .member_cash strong{
+			display: inline-block;
+			font-weight: 700; font-size: 1.4375rem;
+			color: var(--blue);
+
+			margin-right: 3px;
+		}
+
+		#mypage .dashboard .board_left .dashboard_nav{
+			margin-top: 65px;
+			width: 90%;
+		}
+		#mypage .dashboard .board_left .dashboard_nav li{}
+		#mypage .dashboard .board_left .dashboard_nav li a{
+			display: flex;
+			align-items: center; gap: 10px;
+			box-sizing: border-box;
+			border-radius: 0 20px 20px 0;
+
+			padding: 30px 45px;
+
+			font-size: 1.25rem;
+
+			position: relative;
+			transition: background-color 0.3s;
+		}
+
+		#mypage .dashboard .board_left .dashboard_nav li:hover a{
+			background-color: rgba(255,255,255,.5);
+			font-weight: 500;
+		}
+
+		#mypage .dashboard .board_left .dashboard_nav li i{
+			display: inline-block;
+			filter: invert(18%) sepia(39%) saturate(1076%) hue-rotate(313deg) brightness(112%) contrast(68%);
+		}
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(1) i{
+				width: 34px; height: 22px;
+
+				background: url(/img/icn_card.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(2) i{
+				width: 28px; height: 26px;
+
+				background: url(/img/icn_inquiry.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(3) i{
+				width: 29px; height: 29px;
+
+				background: url(/img/icn_member.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(4) i{
+				width: 29px; height: 29px;
+
+				background: url(/img/icn_charge.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+
+		#mypage .dashboard .board_left .dashboard_nav li .arrow{
+			display: none;
+			width: 25px; height: 25px;
+			border-radius: 50%;
+			background-color: var(--point-color01);
+
+			position: absolute;
+			right: 25px; top: 50%;
+			transform: translateY(-50%);
+		}
+			#mypage .dashboard .board_left .dashboard_nav li .arrow::before{
+				content: "";
+				
+				width: 2px; height: 7px;
+				background-color: #fff;
+				
+				position: absolute;
+				top: 42%; left: 54%;
+				transform: translate(-50%,-50%) rotate(-45deg);
+			}
+			#mypage .dashboard .board_left .dashboard_nav li .arrow::after{
+				content: "";
+				
+				width: 2px; height: 7px;
+				background-color: #fff;
+				
+				position: absolute;
+				top: 60%; left: 54%;
+				transform: translate(-50%,-50%) rotate(45deg);
+			}
+		
+		#mypage .dashboard .board_left .dashboard_nav li.active a{
+			background-color: #fff; font-weight: 700;
+			color: var(--blue);
+		}
+		#mypage .dashboard .board_left .dashboard_nav li.active i{}
+		#mypage .dashboard .board_left .dashboard_nav li.active .arrow{
+			display: inline-block;
+		}
+
+
+
+
+
+	
+
+
+
+		@media screen and (max-width:1280px){
+				#mypage .dashboard .board_left .dashboard_nav li a{
+					padding: 30px 33px;
+				}
+				#mypage .dashboard .board_right .search_box .search_date{
+					gap:19px;
+				}
+			}
+
+
+		@media screen and (max-width:1200px){
+				#mypage .dashboard .board_left .dashboard_nav li a{
+					padding: 30px 26px;
+				}
+		}
+
+
+
+		@media screen and (max-width:1024px){
+			#mypage .dashboard .board_left{
+				width: 30%;
+			}
+
+
+		}
+
+
+		@media screen and (max-width: 900px){
+			#mypage .dashboard .board_left{
+				width: 100%;
+				padding-bottom: 50px;
+			}
+
+			#mypage .dashboard .board_left .member_profile{
+				margin-top: 50px;
+				display: flex; gap: 30px;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#mypage .dashboard .board_left .dashboard_nav{
+				margin: 0 auto;
+				margin-top: 40px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 15px;
+				justify-content: center;
+			}
+
+			#mypage .dashboard .board_left .dashboard_nav li{
+				width: calc( calc(100% - 45px) / 2 );
+			}
+
+			#mypage .dashboard .board_left .dashboard_nav li.active .arrow{
+			}
+			#mypage .dashboard .board_left .dashboard_nav li .arrow {
+				right: 30px;
+			}
+			#mypage .dashboard .board_left .dashboard_nav li a{
+				border-radius: 20px;
+				padding: 20px 30px;
+			}
+		}
+
+
+
+		@media screen and (max-width: 800px){
+			
+			#mypage .dashboard .board_left .dashboard_nav li a{
+					padding: 30px 11px;
+					font-size: 15px;
+				}
+				#mypage .dashboard .board_left .dashboard_nav li .arrow{
+					/* right: 13px; */
+				}
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(1) i{
+					width:28px;
+					height: 19px;
+					background-size: 100% auto;
+				}
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(2) i{
+					width: 24px;
+					height: 22px;
+					background-size: 100% auto;
+				}
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(3) i{
+					width: 24px;
+					height: 22px;
+					background-size: auto 100%;
+				}
+
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(4) i{
+					width: 30px;
+					height: 26px;
+					background-size: auto 100%;
+				}
+
+		}
+
+
+		@media screen and (max-width: 600px){
+			#mypage .dashboard .board_left{
+					width: 100%;
+					/* padding-bottom: 80px; */
+					padding-bottom: 35px;
+
+				}
+				#mypage .dashboard .board_right{
+					width: 100%;
+				}
+				#mypage .dashboard .board_left .member_profile{
+					margin-top: 0;
+					/* padding-top: 60px; */
+					padding-top: 40px;
+					gap: 20px;
+				}
+				#mypage .dashboard{
+					display: block;
+				}
+				#mypage .dashboard .board_left .dashboard_nav{
+					/* margin-top: 55px; */
+					margin-top: 30px;
+					width: 100%;
+					gap: 10px;
+				}
+				#mypage .dashboard .board_left .dashboard_nav li a{
+					/* padding: 30px 45px; */
+					padding: 15px 10px;
+					/* font-size: 20px; */
+					font-size: 0.875rem;
+					border-radius: 10px;
+					
+				}
+				#mypage .dashboard .board_left .dashboard_nav li .arrow{
+					/* right: 36px; */
+					right: 10px;
+					width: 20px; height: 20px;
+				}
+				
+				#mypage .dashboard .board_left .dashboard_nav li .arrow::before{
+					height: 5px;
+				}
+				#mypage .dashboard .board_left .dashboard_nav li .arrow::after{
+					height: 5px;
+				}
+
+
+				#mypage .dashboard .board_left .member_icon{
+					width: 100px; height: 100px;
+				}
+
+				#mypage .dashboard .board_left .member_name{
+					font-size: 1rem;
+				}
+				#mypage .dashboard .board_left .member_cash{
+					font-size: 0.9375rem;
+				}
+				#mypage .dashboard .board_left .member_cash span{
+					font-size: 0.75rem;
+				}
+				#mypage .dashboard .board_left .member_cash strong{
+					font-size: 1rem;
+				}
+
+
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(1) i,
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(2) i,
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(3) i,
+				#mypage .dashboard .board_left .dashboard_nav li:nth-child(4) i{
+					width: 23px; height: 22px;
+				}
+		}
+
+
+		@media screen and (max-width: 480px){
+			#mypage .dashboard .board_left .dashboard_nav li .arrow::after{
+					top: 56%;
+				}
+		}
+
+
+		@media screen and (max-width: 390px){
+			
+		}

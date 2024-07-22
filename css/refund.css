@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+#refund{
+	background-color:var(--light-blue);
+	position: relative;
+}
+
+#refund::before{
+	content:'';
+	position:absolute;
+	bottom:5%;
+	left:0;
+	width:1106px;
+	height:111px;
+	background:url(/img/ref_img.png) no-repeat;
+	background-size: 100% auto;
+}
+
+#refund .wrapper{
+	display:flex;
+	padding: 100px 0 230px 0;
+}
+
+#refund .wrapper .refund_left{
+	width:40%;
+}
+
+#refund .wrapper .refund_right{
+	width:60%;
+}
+
+#refund .wrapper .refund_left .refund_tit{
+	font-size:2.8125rem;
+	font-weight:800;
+	color:var(--gray02);
+}
+
+
+#refund .wrapper .refund_left .refund_tit span{
+	font-size:inherit;
+	font-weight:inherit;
+	color:var(--black);
+}
+
+#refund .wrapper .refund_right .ref_cont_tit{
+	color:var(--black);
+	font-size:1.4375rem;
+	font-weight:800;
+	margin-bottom:25px;
+	word-break: keep-all;
+}
+
+#refund .wrapper .ref{
+	margin-bottom:50px;
+}
+
+#refund .wrapper .ref:last-child{
+	margin-bottom:0;
+}
+
+.color_b{
+	color:var(--blue);
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+.color_y{
+	color:var(--yellow);
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+#refund .wrapper .ref_cont_txt{
+	display:flex;
+	align-items: center;
+	width:100%;
+}
+
+#refund .wrapper .ref_cont_txt p{
+	color:var(--gray01);
+	font-size:1.25rem;
+	word-break: keep-all;
+	width:95%;
+}
+
+#refund .wrapper .ref_cont_txt .dot{
+	display:block;
+	width: 5px;
+	height:5px;
+	background-color:var(--gray01);
+	border-radius: 50%;
+	margin-right: 7px;
+}
+
+
+/* 개발자모드 1440px */
+@media screen and (max-width: 1500px){}
+
+
+/* 개발자모드 1280px */
+@media screen and (max-width: 1300px){
+
+	#refund .wrapper{
+		padding:100px 0 200px 0;
+	}
+	
+	#refund::before{
+		width:980px;
+		height:98px;
+	}
+
+	#refund .wrapper .refund_left .refund_tit{
+		font-size:2.8rem;
+	}
+
+	#refund .wrapper .refund_right .ref_cont_tit{
+		font-size: 1.33333rem;
+		margin-bottom:15px;
+	}
+
+	#refund .wrapper .ref_cont_txt p{
+		font-size:1.125rem;
+	}
+}
+
+
+/* 개발자모드 1024px */
+@media screen and (max-width: 1100px){
+	#refund .wrapper{
+		padding:100px 0 180px 0;
+		flex-direction: column;
+	}
+	
+	#refund::before {
+		width: 80%;
+		height: 98px;
+	}
+
+	#refund .wrapper .refund_left {
+		width: 100%;
+		padding-bottom:30px;
+	}
+
+	#refund .wrapper .refund_right {
+		width: 100%;
+		padding-top:30px;
+		border-top:1px dashed var(--blue);
+	}
+}
+
+
+/* 개발자모드 iPad Mini  */
+@media screen and (max-width: 900px){}
+
+
+/* 개발자모드 iPhone SE  */
+@media screen and (max-width: 767px){
+	#refund .wrapper{
+		padding:80px 0 160px 0;
+	}
+
+	#refund .wrapper .ref_cont_txt{
+		    align-items: start;
+	}
+
+	#refund .wrapper .ref_cont_txt .dot{
+		width:4px;
+		height:4px;
+		margin-top: calc((1.23077rem - 4px) / 2);
+	}
+}
+
+
+/* 개발자모드 Galaxy Fold  */
+@media screen and (max-width: 320px){
+	#refund .wrapper{
+		padding:60px 0 60px 0;
+	}
+
+	#refund .wrapper .ref_cont_txt p {
+		font-size: 1.23077rem;
+	}
+
+	#refund .wrapper .refund_left .refund_tit {
+		font-size: 2.46154rem;
+	}
+
+	#refund::before{
+		display:none;
+	}
+
+	#refund .wrapper .ref {
+		margin-bottom: 30px;
+	}
+}

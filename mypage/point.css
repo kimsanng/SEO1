@@ -1,0 +1,1272 @@
+@charset "utf-8";
+
+
+
+
+
+
+/* @자주 묻는질문 스타일 설정 시작@ */
+#mypage{
+	background-color: var(--sub-bg-color01);
+
+	position: relative; overflow: hidden;
+	padding: 0 !important;
+}
+
+	#mypage .wrapper{
+		width: 100% !important; display: block;
+		padding-bottom: 0 !important;
+	}
+
+	#mypage .dashboard{
+		display: flex;
+		overflow: hidden;
+	}
+
+		#mypage .dashboard .board_left{
+			width: 20%;
+			background-color: #edebfe;
+			padding-bottom: 80px;
+		}
+		#mypage .dashboard .board_left .member_profile{
+			margin-top: 100px;
+			text-align: center;
+		}
+		#mypage .dashboard .board_left .member_icon{
+			display: inline-block;
+			width: 130px; height: 130px;
+			border-radius: 50%;
+
+			position: relative;
+			overflow: hidden;
+			/* filter: invert(18%) sepia(39%) saturate(1076%) hue-rotate(313deg) brightness(112%) contrast(68%); */
+
+			/* background: url(/img/profile.png) no-repeat;
+			background-size: cover;
+			background-position: center; */
+
+		}
+			#mypage .dashboard .board_left .member_icon img{
+				width: 100%;
+				position: absolute;
+				top: 50%; left: 50%; 
+				transform: translate(-50%,-50%);
+			}
+		#mypage .dashboard .board_left .member_name{
+			margin-top: 20px;
+			font-size: 1.25rem;
+		}
+		#mypage .dashboard .board_left .member_name strong{
+			font-weight: 700; font-size: inherit;
+		}
+
+		#mypage .dashboard .board_left .member_cash{
+			margin-top: 15px; font-size: 1rem;
+
+			display: flex; align-items: center; justify-content: center;
+		}
+		#mypage .dashboard .board_left .member_cash span{
+			display: inline-block; margin-right: 5px;
+
+			font-weight: 600; background-color: var(--point-color01);
+			padding: 5px 10px; border-radius: 30px;
+			color: #fff;
+
+		}
+		#mypage .dashboard .board_left .member_cash strong{
+			display: inline-block;
+			font-weight: 700; font-size: 1.25rem;
+
+			margin-right: 3px;
+		}
+
+		#mypage .dashboard .board_left .dashboard_nav{
+			margin-top: 65px;
+			width: 90%;
+		}
+		#mypage .dashboard .board_left .dashboard_nav li{}
+		#mypage .dashboard .board_left .dashboard_nav li a{
+			display: flex;
+			align-items: center; gap: 10px;
+			box-sizing: border-box;
+			border-radius: 0 20px 20px 0;
+
+			padding: 30px 45px;
+
+			font-size: 1.25rem;
+
+			position: relative;
+			transition: background-color 0.3s;
+		}
+
+		#mypage .dashboard .board_left .dashboard_nav li:hover a{
+			background-color: rgba(255,255,255,.5);
+			font-weight: 500;
+		}
+
+		#mypage .dashboard .board_left .dashboard_nav li i{
+			display: inline-block;
+		}
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(1) i{
+				width: 34px; height: 22px;
+
+				background: url(/img/icn_card.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(2) i{
+				width: 28px; height: 26px;
+
+				background: url(/img/icn_inquiry.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(3) i{
+				width: 29px; height: 29px;
+
+				background: url(/img/icn_member.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+
+			#mypage .dashboard .board_left .dashboard_nav li:nth-child(4) i{
+				width: 29px; height: 29px;
+
+				background: url(/img/icn_charge.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+
+		#mypage .dashboard .board_left .dashboard_nav li .arrow{
+			display: none;
+			width: 25px; height: 25px;
+			border-radius: 50%;
+			background-color: var(--point-color01);
+
+			position: absolute;
+			right: 25px; top: 50%;
+			transform: translateY(-50%);
+		}
+			#mypage .dashboard .board_left .dashboard_nav li .arrow::before{
+				content: "";
+				
+				width: 2px; height: 7px;
+				background-color: #fff;
+				
+				position: absolute;
+				top: 45%; left: 54%;
+				transform: translate(-50%,-50%) rotate(-45deg);
+			}
+			#mypage .dashboard .board_left .dashboard_nav li .arrow::after{
+				content: "";
+				
+				width: 2px; height: 7px;
+				background-color: #fff;
+				
+				position: absolute;
+				top: 57%; left: 54%;
+				transform: translate(-50%,-50%) rotate(45deg);
+			}
+		
+		#mypage .dashboard .board_left .dashboard_nav li.active a{
+			background-color: #fff; font-weight: 600;
+		}
+		#mypage .dashboard .board_left .dashboard_nav li.active i{}
+		#mypage .dashboard .board_left .dashboard_nav li.active .arrow{
+			display: inline-block;
+		}
+
+		#mypage .dashboard .board_right{
+			width: 80%; box-sizing: border-box;
+			padding: 60px 55px; background-color: #fff;
+
+			text-align: center;
+		}
+
+			#mypage .dashboard .board_right .tit_box{
+				display: flex;
+				justify-content: space-between; align-items: center;
+
+				padding-bottom: 20px;
+				border-bottom: 1px solid #e7e7e7;
+			}
+			#mypage .dashboard .board_right .tit_box h2{
+				font-size: 1.875rem; font-weight: 600;
+			}
+			#mypage .dashboard .board_right .tit_box h2 i{
+				display: inline-block;
+				filter: invert(18%) sepia(39%) saturate(1076%) hue-rotate(313deg) brightness(112%) contrast(68%);
+					
+				width: 29px; height: 29px;
+
+				background: url(/img/icn_member.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+
+				margin-right: 10px;
+
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap{
+				font-size: 1rem;
+				color: #666;
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap a{
+				font-size: inherit;
+				color: inherit;
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap i{
+				font-size: inherit;
+				color: inherit;
+			}
+
+			#mypage .dashboard .board_right .desc{
+				margin-top: 20px;
+				font-size: 0.875rem;
+				color: #afafaf;
+				text-align: left;
+			}
+
+			#mypage .dashboard .board_right #profile{
+				margin-top: 30px; border-radius: 50px;
+				box-sizing: border-box;
+
+				padding: 40px 45px;
+			}
+
+			#mypage .dashboard .board_right #profile input:not([type=file]):not([type=submit]){
+				outline: none; border: 1px solid #e8e8e8;
+				border-radius: 5px;
+				transition: 0.3s;
+				font-size: 0.9375rem;
+				box-sizing: border-box; 
+				padding: 10px 15px;
+				width: 300px;
+			}
+			#mypage .dashboard .board_right #profile input:focus{
+				border-color: #999;
+			}
+
+			#mb_id{
+				pointer-events: none;
+			}
+
+			#mypage .dashboard .board_right #profile table{
+				width: 100%; box-sizing: border-box;
+				text-align: left;
+			}
+
+
+			
+			#mypage .dashboard .point_wrap{
+				display:flex;
+				flex-direction: column;
+				/* height:250px; */
+
+				margin-top: 40px;
+				
+
+			}
+
+
+
+			#mypage .dashboard .point_wrap .point_box.left{
+				
+			}
+
+
+			#mypage .dashboard .point_wrap .point_box.left h3{
+				font-size: 1.25rem;
+				font-weight: 600;
+				text-align: left;
+
+				position: relative;
+				display: flex; align-items: center;
+				gap: 5px;
+				box-sizing: border-box;
+				padding: 0 15px;
+
+				padding-bottom: 20px;
+				border-bottom: 1px dotted #e7e7e7;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.left h3 i{
+				font-size: 1rem;
+				font-weight: 700;
+				width: 25px; height: 25px;
+				background-color: var(--blue);
+				border-radius: 50%;
+				display: inline-flex; align-items: center; justify-content: center;
+				position: relative;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.left h3 i::after{
+				content: "1";
+				font-size: 1rem;
+				color: #fff;
+				font-style: normal;
+				font-weight: 700;
+				position: absolute;
+				top: 50%; left: 52%;
+				transform: translate(-50%,-50%);
+			}
+
+			#mypage .dashboard .point_wrap .point_box.left .point_list{
+				display: flex; flex-wrap: wrap;
+				margin-top: 30px;
+				gap: 30px;
+				box-sizing: border-box;
+				padding: 0 15px;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.left .point_list li{
+				width: calc( calc(100% - calc(30px * 3)) / 4);
+				text-align: left;
+				display: flex; align-items: center;
+				gap: 7px;
+				font-size: 1.125rem;
+				font-weight: 600;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.left .point_list li span{
+				color: #888;
+				font-weight: 400;
+				font-size: 0.9375rem;
+			}
+			
+
+			
+			#mypage .dashboard .point_wrap .point_box.right{
+				margin-top: 70px;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right h3{
+				font-size: 1.25rem;
+				font-weight: 600;
+				text-align: left;
+
+				position: relative;
+				display: flex; align-items: center;
+				gap: 5px;
+				box-sizing: border-box;
+				padding: 0 15px;
+
+				padding-bottom: 20px;
+				border-bottom: 1px dotted #e7e7e7;
+			}
+			
+			#mypage .dashboard .point_wrap .point_box.right h3 i{
+				font-size: 1rem;
+				font-weight: 700;
+				width: 25px; height: 25px;
+				background-color: var(--blue);
+				border-radius: 50%;
+				display: inline-flex; align-items: center; justify-content: center;
+				position: relative;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right h3 i::after{
+				content: "2";
+				font-size: 1rem;
+				color: #fff;
+				font-style: normal;
+				font-weight: 700;
+				position: absolute;
+				top: 50%; left: 52%;
+				transform: translate(-50%,-50%);
+			}
+
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box{
+				
+				margin-top: 30px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+
+				box-sizing: border-box;
+				padding: 25px 15px;
+
+				background-color: var(--light-blue);
+				border-radius: 7px;
+
+
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text{
+				display: flex;
+				align-items: center;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text,
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.plus,
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.equal{
+				padding-bottom: 10px;
+			}
+
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text h4{
+				font-size: 1.125rem; font-weight: 400;
+				color: #333;
+				margin-right: 7px;
+			}
+			
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text p{
+				font-size: 1.125rem;
+				display: flex; align-items: center;
+				gap: 3px;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text span{
+				color: var(--blue);
+				font-weight: 700;
+				font-size: 1.375rem;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.plus span{
+				display: flex;
+				justify-content: center; align-items: center;
+				flex-direction: column;
+				width: 25px; height: 25px;
+				border-radius: 50%;
+				font-size: 1.0625rem; font-weight: 600;
+				background-color: var(--yellow);
+				color: #fff;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.equal span{
+				display: flex;
+				justify-content: center; align-items: center;
+				flex-direction: column;
+				width: 25px; height: 25px;
+				border-radius: 50%;
+				font-size: 1.0625rem; font-weight: 600;
+				background-color: var(--yellow);
+				color: #fff;
+			}
+
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount{
+				display: flex;
+				width: 100%;
+				/* justify-content: flex-end; */
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				padding-top: 20px;
+				border-top: 1px dashed #ccc;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount i{}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount h4{
+				font-size: 1.125rem;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount p{
+				font-size: 1.125rem;
+				display: flex; align-items: center;
+			}
+
+			#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount span{
+				color: var(--blue);
+				font-weight: 700;
+				font-size: 1.375rem;
+			}
+
+			#mypage .point_charge_wrap{
+				margin-top: 70px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			#mypage .point_charge_wrap_tax{
+				margin-top: 70px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			#mypage .point_charge_tax{
+				margin-top: 30px;
+				border-bottom: 1px dotted #e7e7e7;
+				width: 100%;
+				text-align: left;
+				padding-bottom: 25px;
+				margin-left: 21px;
+
+			}
+			#mypage .point_charge_wrap_tax .point_charge_tax_content{
+				
+				display: contents;
+				align-items: center;
+			
+			}
+	
+			#mypage .point_charge_wrap h3{
+				width: 100%;
+				font-size: 1.25rem;
+				font-weight: 600;
+				text-align: left;
+
+				position: relative;
+				display: flex; align-items: center;
+				gap: 5px;
+				box-sizing: border-box;
+				padding: 0 15px;
+
+				padding-bottom: 20px;
+				border-bottom: 1px dotted #e7e7e7;
+			}
+
+			#mypage .point_charge_wrap h3 i{
+				font-size: 1rem;
+				font-weight: 700;
+				width: 25px; height: 25px;
+				background-color: var(--blue);
+				border-radius: 50%;
+				display: inline-flex; align-items: center; justify-content: center;
+				position: relative;
+			}
+
+			#mypage .point_charge_wrap h3 i::after{
+				content: "3";
+				font-size: 1rem;
+				color: #fff;
+				font-style: normal;
+				font-weight: 700;
+				position: absolute;
+				top: 50%; left: 52%;
+				transform: translate(-50%,-50%);
+			}
+
+			#mypage .point_charge_wrap_tax h3{
+				width: 100%;
+				font-size: 1.25rem;
+				font-weight: 600;
+				text-align: left;
+
+				position: relative;
+				display: flex; align-items: center;
+				gap: 5px;
+				box-sizing: border-box;
+				padding: 0 15px;
+
+				padding-bottom: 20px;
+				border-bottom: 1px dotted #e7e7e7;
+			}
+
+			#mypage .point_charge_wrap_tax h3 i{
+				font-size: 1rem;
+				font-weight: 700;
+				width: 25px; height: 25px;
+				background-color: var(--blue);
+				border-radius: 50%;
+				display: inline-flex; align-items: center; justify-content: center;
+				position: relative;
+			}
+
+			#mypage .point_charge_wrap_tax h3 i::after{
+				content: "4";
+				font-size: 1rem;
+				color: #fff;
+				font-style: normal;
+				font-weight: 700;
+				position: absolute;
+				top: 50%; left: 52%;
+				transform: translate(-50%,-50%);
+			}
+
+
+			#mypage .point_charge_box{
+				margin-top: 30px;
+				/* width: 100%; */
+				width: 50%;
+				box-sizing: border-box;
+				padding: 0 15px;
+				text-align: left;
+
+				display: flex;
+				align-items: center;
+				gap: 7px;
+			}
+
+
+
+
+
+			#mypage .point_charge_box:nth-child(3){
+				/* margin-top: 20px; */
+			}
+
+			#mypage .point_charge_box input[type=text]{
+				outline: none;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				padding: 5px 10px;
+				transition: 0.3s;
+				border-radius: 5px;
+			}
+
+			#mypage .point_charge_box input[type=text]:hover{
+				border-color: #999;
+			}
+
+			#mypage .point_charge_box input[type=text]:focus{
+				border-color: #666;
+			}
+
+
+
+
+
+/* */
+			#mypage .point_charge_box_tax{
+				margin-top: 30px;
+				/* width: 100%; */
+				width: 50%;
+				box-sizing: border-box;
+				    padding: 0 70px;
+				text-align: left;
+	
+				display: flex;
+				align-items: center;
+				gap: 7px;
+				justify-content: space-between;
+			}
+
+			#mypage .point_charge_box_tax:nth-child(3){
+				/* margin-top: 20px; */
+			}
+
+			#mypage .point_charge_box_tax input[type=text]{
+				outline: none;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				padding: 5px 10px;
+				transition: 0.3s;
+				border-radius: 5px;
+			}
+
+			#mypage .point_charge_box_tax input[type=text]:hover{
+				border-color: #999;
+			}
+
+			#mypage .point_charge_box_tax input[type=text]:focus{
+				border-color: #666;
+			}
+
+
+
+
+
+			input[type=radio]{
+				    appearance: none;
+					width: 20px;
+					height: 20px;
+					border: 1px solid #ccc;
+					border-radius: 50%;
+					position: relative;
+					padding: 0;
+					margin-right: 0;
+					margin-bottom: 0;
+					cursor: pointer;
+			}
+
+		input[type=radio]:checked::before {
+			content: "";
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background: var(--blue);
+			border-color: var(--blue);
+		}
+
+
+		#pay_btn{
+			outline: none;
+			border: 0;
+			background-color: var(--blue);
+			color: #fff;
+			padding: 20px 50px;
+			border-radius: 5px;
+			font-size: 1.25rem;
+			margin-top: 70px;
+			height: auto !important;
+			transition: 0.3s;
+		}
+
+		#pay_btn:hover {
+			background-color: var(--blue-hover);
+		}
+
+
+			
+.filebox{
+	margin-top: 10px;
+}
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.filebox label {
+	padding: 10px 15px;
+	background-color: var(--point-color01);
+	border-radius: 5px;
+	color: #fff; font-weight: 600;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.filebox label:hover{
+	background-color: #453fc7;
+}
+
+
+/* named upload */
+.filebox .upload-name {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+
+#mypage #profile label:not(.profile label){
+	font-size: 1.125rem; font-weight: 600;
+	text-align: left;
+
+	position: relative;
+	padding-left: 20px;
+}
+#mypage #profile .profile label{
+	font-size: 1.125rem; foont-weight: 600;
+	text-align: left;
+}
+.required{
+	background-image: none !important;
+}
+#mypage #profile label.required::before{
+	content: "*";
+	font-size: 1.25rem; font-weight: 700;
+	color: var(--point-color02);
+	position: absolute;
+	top: 50%; left: 0;
+	transform: translateY(-50%);
+}
+
+#mypage #profile th{
+	text-align: left;
+	padding-left: 50px !important;
+
+	width: 30%;
+
+}
+
+#mypage #profile tr:nth-of-type(2n){
+	background-color: #f7f7fe;
+}
+
+#mypage #profile th,
+#mypage #profile td{
+	padding: 25px 0;
+}
+
+#mypage #profile .profile{}
+#mypage #profile .profile th,
+#mypage #profile .profile td{
+	padding-bottom: 45px;
+}
+
+#mypage #profile .profile .img_box{
+	width: 170px; height: 170px;
+	border-radius: 50%;
+	overflow: hidden;
+
+	position: relative;
+}
+
+#mypage #profile .profile .img_box img{
+	position: absolute;
+	width: 100%;
+	top: 50%; left: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+
+
+
+
+		#mypage .btn_submit{
+			outline: none; background-color: var(--point-color01);
+			padding:  20px 50px; border-radius: 5px;
+			font-size: 1.25rem;
+			margin-top: 70px;
+			height: auto !important;
+
+			transition: 0.3s;
+		 }
+		 #mypage .btn_submit:hover{
+			background-color: #453fc7;
+		 }
+
+
+
+
+
+
+/* 
+################################################################
+#################################################################
+#################################################################
+*/
+
+@media screen and (max-width:1500px){
+	#mypage .wrapper{
+		width: 90%;
+	}
+}
+
+
+
+
+@media screen and (max-width:1280px){
+	.tit_banner{
+		padding-top: 0;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li a{
+		padding: 30px 33px;
+	}
+	#mypage .dashboard .board_right .search_box .search_date{
+		gap:19px;
+	}
+
+	#mypage .dashboard .board_left{
+		width: 26%;
+	}
+	#mypage #profile .profile .img_box{
+		width: 145px; height: 145px;
+	}
+	
+
+	#mypage .dashboard .point_wrap .point_box.left .point_list li {
+		width: calc( calc(100% - calc(30px * 3)) / 3);
+
+	}
+
+}
+@media screen and (max-width:1200px){
+	.tit_banner .background .wrapper{
+		padding: 87px 0 97px;
+	}
+	#mypage .select_btn{
+		font-size: 13px;
+		gap:4px;
+	}
+
+	#mypage .dashboard .board_right .search_box fieldset label{font-size: 13px;}
+	#mypage .dashboard .board_right .search_box .search_date{
+		gap: 13px;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		padding-top:10px;
+	}
+	#mypage .history_table .tbody .td_num{
+		padding-top: 10px;
+	}
+	#mypage .history_table .tbody .td_package{
+		padding-top:10px;
+	}
+	#mypage .history_table .tbody .td_amount{
+		padding-top: 10px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li a{
+		padding: 30px 26px;
+	}
+}
+
+@media screen and (max-width:1024px){
+	#mypage .dashboard .board_right{
+		width: 75%;
+	}
+	#mypage .dashboard .board_left{
+		width: 25%;
+	}
+	#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+		width: 409px;
+	}
+	#mypage .dashboard .board_right .search_box .search_date{
+		display: block;
+	}
+	#mypage .dashboard .board_right .search_box fieldset label{
+		font-size: 18px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 31.5px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn{
+		margin: 15px 0 20px 0;
+	}
+	#mypage .select_btn{
+		gap: 15px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 170px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-left: 18px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset:not(:last-of-type){
+		margin-bottom: 25px;
+	}
+	#mypage .history_table .thead span{
+		font-size: 0.9rem;
+	}
+	#mypage .history_table li span{
+		font-size: 0.85rem;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		width: 28%;
+	}
+	#mypage .history_table .thead .th_order_num{
+		width: 28%;
+	}
+	#mypage .history_table .thead .th_package{
+		width: 24%;
+	}
+	#mypage .history_table .tbody .td_package{
+		width: 24%;
+	}
+
+	
+	#mypage .dashboard .point_wrap .point_box.left h3 i,
+	#mypage .dashboard .point_wrap .point_box.right h3 i,
+	#mypage .point_charge_wrap h3 i,
+	#mypage .point_charge_wrap_tax h3 i{
+		width: 23px; height: 23px;
+	}
+	#mypage .dashboard .point_wrap .point_box.left h3 i::after,
+	#mypage .dashboard .point_wrap .point_box.right h3 i::after,
+	#mypage .point_charge_wrap h3 i::after,
+	#mypage .point_charge_wrap_tax h3 i::after{
+		font-size: 0.9375rem;
+	}
+	#mypage .dashboard .point_wrap .point_box.left h3,
+	#mypage .dashboard .point_wrap .point_box.right h3,
+	#mypage .point_charge_wrap h3,
+	#mypage .point_charge_wrap_tax h3{
+		font-size: 1.125rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.left .point_list{
+		gap: 20px;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.left .point_list li{
+		font-size: 1.0625rem;
+		width: calc( calc(100% - calc(20px * 2)) / 3);
+	}
+	
+	#mypage .dashboard .point_wrap .point_box.left .point_list li span{
+		font-size: 0.75rem;
+	}
+
+
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box{
+		gap: 8px;
+	}
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text h4{
+		font-size: 1rem;
+	}
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text span{
+		font-size: 1.125rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text p{
+		font-size: 1rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.plus span,
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.equal span{
+		width: 23px; height: 23px;
+		font-size: 0.9375rem;
+	}
+
+	#mypage .point_charge_box{
+		width: 100%;
+	}
+
+}
+
+
+@media screen and (max-width: 900px){
+	#mypage .dashboard{
+		flex-wrap: wrap;
+	}
+
+	#mypage .dashboard .board_left{
+		width: 100%;
+	}
+	#mypage .dashboard .board_right{
+		width: 100%;
+	}
+
+}
+
+
+@media screen and (max-width:800px){
+	#mypage .dashboard .board_left .dashboard_nav li a{
+		padding: 30px 11px;
+		font-size: 15px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li .arrow{
+		right: 13px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li:nth-child(1) i{
+		width:28px;
+		height: 19px;
+		background-size: 100% auto;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li:nth-child(2) i{
+		width: 24px;
+		height: 22px;
+		background-size: 100% auto;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li:nth-child(3) i{
+		width: 24px;
+		height: 22px;
+		background-size: auto 100%;
+	}
+	#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+		width: 81%;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 22.5px;
+		font-size: 13px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset>label{
+		width: 20%;
+	}
+	#mypage .select_btn{
+		gap: 13px;
+		width: 100%;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 134px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-left: 4px;
+	}
+	#mypage .history_table_wrap{
+		overflow: scroll;
+	}
+	#mypage .history_table{
+		width: 900px;
+	}
+	#mypage .history_table .tbody .td_num{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_package{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_amount{
+		padding-top: 0;
+	}
+
+}
+
+@media screen and (max-width:600px){
+	.tit_banner .background .wrapper{
+		padding: 40px 0 41px;
+	}
+	.tit_banner .background .txt_box h2{
+		font-size: 2rem;
+	}
+	.tit_banner .background .txt_box p{
+		margin-top: 16px;
+	}
+	.tit_banner .background .icn_box i{
+		width: 75% !important;
+		height: 75% !important;
+		background-size: auto 100% !important;
+	}
+	#mypage .dashboard .board_left{
+		width: 100%;
+	}
+	#mypage .dashboard .board_right{
+		width: 100%;
+		padding: 40px 30px;
+	}
+	#mypage .dashboard .board_left .member_profile{
+		margin-top: 0;
+		padding-top: 60px;
+	}
+	#mypage .dashboard{
+		display: block;
+	}
+	#mypage .dashboard .board_left .dashboard_nav{
+		margin-top: 55px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li a{
+		padding: 30px 45px;
+		font-size: 20px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li .arrow{
+		right: 36px;
+	}
+
+
+	#mypage .dashboard .board_right .tit_box h2{
+		font-size: 1.125rem;
+		display: flex; align-items: center;
+	}
+
+	#mypage .dashboard .board_right .tit_box h2 i{
+		width: 20px; height: 20px;
+	}
+	
+
+	#mypage .dashboard .board_right .tit_box .siteMap{
+		font-size: 0.875rem;
+	}
+	
+
+	#mypage .dashboard .point_wrap{
+		margin-top: 30px;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.left h3,
+	#mypage .dashboard .point_wrap .point_box.right h3,
+	#mypage .point_charge_wrap h3,
+	#mypage .point_charge_wrap_tax h3{
+		font-size: 1rem;
+		padding: 0 5px;
+		padding-bottom: 15px;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.left h3 i::after,
+	#mypage .dashboard .point_wrap .point_box.right h3 i::after,
+	#mypage .point_charge_wrap h3 i::after,
+	#mypage .point_charge_wrap_tax h3 i::after{
+		font-size: 0.75rem;
+	}
+	#mypage .dashboard .point_wrap .point_box.left h3 i,
+	#mypage .dashboard .point_wrap .point_box.right h3 i,
+	#mypage .point_charge_wrap h3 i,
+	#mypage .point_charge_wrap_tax h3 i{
+		width: 20px; height: 20px;
+	}
+	
+
+	#mypage .dashboard .point_wrap .point_box.left .point_list{
+		gap: 13px;
+		margin-top: 20px;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.left .point_list li{
+		width: calc( calc(100% - 13px) / 2);
+		font-size: 0.875rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.left .point_list li span{
+		/* font-size: 0.625rem; */
+		display: none;
+	}
+
+	input[type=radio]{
+		width: 17px; height: 17px;
+	}
+	input[type=radio]:checked::before{
+		width: 7.5px; height: 7.5px;
+	}
+
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box{
+		margin-top: 20px;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text{
+		flex-direction: column;
+		gap: 3px;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text h4{
+		font-size: 0.875rem;
+		margin-right: 0;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text span{
+		font-size: 1rem;
+	}
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text p{
+		font-size: 0.875rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.plus span, #mypage .dashboard .point_wrap .point_box.right .charge_check_box li.equal span{
+		width: 20px; height: 20px;
+	}
+	
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.text, #mypage .dashboard .point_wrap .point_box.right .charge_check_box li.plus, #mypage .dashboard .point_wrap .point_box.right .charge_check_box li.equal{
+		padding-bottom: 0;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.plus, #mypage .dashboard .point_wrap .point_box.right .charge_check_box li.equal{
+		display: flex; align-items: center;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount h4{
+		font-size: 0.9375rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount span{
+		font-size: 1.125rem;
+	}
+
+	#mypage .dashboard .point_wrap .point_box.right .charge_check_box li.amount p{
+		font-size: 0.9375rem;
+	}
+
+
+	#mypage .dashboard .point_wrap .point_box.right,
+	#mypage .point_charge_wrap{
+		margin-top: 45px;
+	}
+
+	#mypage .point_charge_box label span{
+		display: block;
+		margin-top: 3px;
+	}
+
+	#mypage .point_charge_box{
+		margin-top: 20px;
+	}
+
+	#mypage .point_charge_box input[type=text]{
+		width: 175px;
+	}
+
+
+	#pay_btn{
+		margin-top: 45px;
+		font-size: 1.125rem;
+		padding: 15px 40px;
+	}
+
+}

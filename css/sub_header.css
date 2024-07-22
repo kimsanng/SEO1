@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+
+/* 
+################################################################
+######################### 헤더 영역 시작 ########################
+################################################################
+*/
+body{
+    display: flex; flex-wrap: wrap;
+    width: 100%; height: 100vh;
+    /* overflow-y: scroll; */
+}
+
+
+
+#sub_header{
+    width: 320px; /* height: calc(100vh - 100px); */
+    background: #fff;
+    box-sizing: border-box;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+	position: relative;
+}
+
+#sub_header .h_logo{
+    font-size: 1.625rem;
+    color: var(--main-color);
+}
+#sub_header .h_logo i{
+    font-size: 1.625rem;
+    color: var(--main-color);
+}
+
+#sub_header .nav{
+	margin-top: 70px;
+}
+
+#sub_header .nav li{}
+#sub_header .nav li a{
+    display: block;
+    padding: 20px 0;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    color: #adadad;
+    font-weight: 200;
+    transition: 0.3s;
+}
+#sub_header .nav li a i{
+    font-size: 1.375rem;
+    color: #adadad;
+    transition: 0.3s;
+}
+
+#sub_header .nav li:not(.active) a:hover{
+    color: #6e6e6e;
+}
+#sub_header .nav li:not(.active) a:hover i{
+    color: #6e6e6e;
+}
+
+#sub_header .nav li.active{}
+#sub_header .nav li.active a{
+    color: var(--blue);
+    font-weight: 500;
+    position: relative;
+}
+#sub_header .nav li.active a i{
+    color: var(--point-color01);
+}
+
+#sub_header .nav li.active a::after{
+    content: "";
+    width: 10px; height: 100%;
+    background: var(--point-color01);
+    position: absolute;
+    top: 50%; right: -50px;
+    transform: translateY(-50%);
+    border-radius: 10px 0 0 10px;
+}
+
+#sub_header .btn_logout{
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #adadad;
+    transition: 0.3s;
+
+	position: absolute;
+	left: 50px; bottom: 50px;
+}
+#sub_header .btn_logout i{
+    font-size: 1rem;
+    color: #adadad;
+    transition: 0.3s;
+}
+
+#sub_header .btn_logout:hover{
+    color: var(--point-color01);
+}
+#sub_header .btn_logout:hover i{
+    color: var(--point-color01);
+}
+
+
+#sub_header .member_info{
+	text-align: center;
+	padding-top: 30px;
+}
+#sub_header .thumbnail{
+	width: 130px; height: 130px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+
+	margin: 0 auto;
+}
+#sub_header .thumbnail img{
+	width: 100%;
+
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#sub_header .member_info .nav{
+	margin-top: 30px;
+}
+
+#sub_header .member_info h1{
+	font-size: 1.25rem; font-weight: 700;
+	margin-top: 15px;
+}
+#sub_header .member_info span{
+	font-size: inherit; font-weight: 400;
+}
+
+#sub_header .member_info li{
+	display: flex; align-items: center;
+	margin-top: 15px; font-size: 1rem;
+	font-weight: 500;
+}
+#sub_header .member_info li span.product_name{
+	font-size: inherit; font-weight: 400;
+	width: 65%; text-align: left;
+	overflow: hidden; text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#sub_header .member_info li span.count_day{
+	font-size: inherit; font-weight: 700;
+	background-color: var(--point-color01); color: #fff;
+	padding: 5px 10px; margin-left: 10px;
+	border-radius: 50px;
+}
+
+
+
+.nice-select{
+	line-height: 40px !important;
+}
+
+
+.fix-btn{
+    display: none !important;
+    
+}
+
+
+
+
+
+
+/* ######################################################
+##########################################################
+########################################################*/
+
+/* 반응형 */
+
+@media screen and (max-width: 1280px){
+	.header.mb{
+		background-color: #fff;
+		border-bottom: 1px solid #ccc;
+	}
+
+
+	#sub_header{
+		width: 80%; height: auto;
+		margin: 45px auto 0;
+		padding: 25px 25px 40px;
+
+		border-radius: 20px;
+	}
+
+	#sub_header .member_info{
+		display: flex;
+		justify-content: center;
+		gap: 25px;
+	}
+
+
+	#sub_header > .nav{
+		width: 80%; margin: 40px auto 0;
+		display: flex; justify-content: space-between;
+	}
+
+	#sub_header > .nav li{
+		width: calc(100% / 4);
+		text-align: center;
+	}
+
+	#sub_header .nav li a{
+		font-size: 1.0625rem;
+		padding: 15px 0;
+	}
+
+	#sub_header .nav li.active a{
+		background-color: var(--point-color01);
+		border-radius: 100px;
+		color: #fff;
+	}
+
+
+	#sub_header .nav li a i{
+		font-size: 1.25rem;
+	}
+
+	#sub_header .nav li.active a i{
+		color: #fff;
+	}
+
+	#sub_header .nav li.active a::after{
+		display: none; 
+	}
+
+
+	#sub_header .btn_logout{ display: none; }
+
+
+}
+
+
+
+
+@media screen and (max-width: 820px){
+	#sub_header{ width: 88%; }
+
+
+	#sub_header .member_info .nav{
+		width: 35%;
+	}
+}
+
+
+
+@media screen and (max-width: 768px){
+	#sub_header .nav li a{
+		font-size: 1rem;
+	}
+
+	#sub_header .nav li a i{
+		font-size: 1.0625rem;
+	}
+}
+
+
+
+
+@media screen and (max-width: 540px){
+	#sub_header .thumbnail{
+		width: 70px; height: 70px;
+	}
+	
+	#sub_header .member_info{
+		padding-top: 0;
+	}
+	#sub_header .member_info h1{
+		font-size: 1rem;
+	}
+
+	#sub_header .member_info li{
+		font-size: 0.9375rem;
+	}
+
+	#sub_header .member_info .nav{
+		margin-top: 0;
+		width: 50%;
+		
+	}
+
+	#sub_header .nav li a{
+		box-sizing: border-box;
+		padding: 10px 15px;
+	}
+
+
+	#sub_header > .nav{
+		width: 90%;
+		flex-wrap: wrap;
+	}
+
+	#sub_header > .nav li{
+		width: 50%;
+	}
+	#sub_header > .nav li a{
+		font-size: 1rem;
+	}
+	#sub_header .nav li a i{
+		font-size: 1rem;
+	}
+	
+}
+
+
+
+@media screen and (max-width: 480px){
+	#sub_header .member_info{
+		flex-direction: column;
+		align-items: center;
+	}
+	#sub_header .member_info .nav{
+		width: 65%; gap: 10px;
+	}
+
+	#sub_header > .nav {
+		width: 100%;
+	}
+	#sub_header .nav li a{
+		padding: 10px 5px;
+		font-size: 0.9375rem;
+	}
+
+	#sub_header > .nav{
+		margin-top: 30px;
+	}
+}
+
+
+
+@media screen and (max-width: 375px){
+	#sub_header .member_info h1{
+		font-size: 0.9375rem;
+	}
+
+	#sub_header .member_info li{
+		font-size: 0.875rem;
+	}
+
+	#sub_header .nav li a{
+		font-size: 0.875rem;
+	}
+}
+
+
+@media screen and (max-width: 320px){
+	#sub_header .member_info h1{
+		font-size: 0.875rem;
+	}
+
+	#sub_header .member_info li{
+		font-size: 0.75rem;
+	}
+
+	#sub_header .nav li a{
+		font-size: 0.75rem;
+	}
+
+	#sub_header .member_info .nav{
+		width: 90%;
+	}
+
+	#sub_header > .nav{
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+	#sub_header > .nav li{
+		width: 90%;
+	}
+}

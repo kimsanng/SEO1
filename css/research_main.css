@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+
+#wrap{
+    width: 1000px;
+    margin: 150px auto 0;
+}
+
+
+#container .t_tit {
+    width: 460px;
+    margin-bottom: 30px;
+}
+
+#container .t_tit .title_img {
+    display: block;
+    width: 100%;
+    height: auto;
+    -webkit-user-drag: none;
+}
+
+textarea::placeholder {
+    color:#777;
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  }
+
+.totalform {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    margin: 0 0 50px 0;
+    padding: 20px 0 40px 0;
+
+}
+
+.totalform .naver_area {
+    position: relative;
+    width: 100%;
+}
+
+.naver_area ul,
+.naver_area li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.totalform #keywords {
+    width: 100%;
+    max-width: 100%;
+    min-height: 305px;
+    padding: 30px;
+    font-size: 15px;
+    color: #666;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    font-family: 'Pretended';
+    border-radius: 10px;
+    background: #f8f9fc;
+    border: none;
+}
+
+textarea:focus{
+    outline:none;
+}
+
+.totalform .btn {
+    width: 320px;
+    height: 65px;;
+    margin: 20px auto;
+    border-radius: 50px;
+    /* position: relative; 
+    margin-top: -6px;
+    padding: 0; */
+    transition: all 0.3s;
+}
+
+
+
+.totalform .t_btn {
+    width: 100%;
+    display: inline-block;
+    /* position: relative; */
+    height: 65px;
+    border: none;
+    font-size: 16px;
+    border-radius: 50px;
+    text-align: center;
+    /* background: #092aef; */
+	background-color: var(--white);
+	border: 1px solid var(--blue);
+	color: var(--blue);
+    font-family: 'Pretendard';
+    cursor: pointer;
+}
+
+.totalform .t_btn:hover{
+    /* box-shadow: 1px 2px 10px #092cef44; */
+	background-color: var(--blue);
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.dotimg{
+    display: block;
+    margin: 40px auto;
+
+}
+
+.totalform .formtable th {
+    font-weight: normal;
+    padding: 10px 0;
+    font-size: 16px;
+    /* color:#092aef; */
+	color: var(--point-color01);
+    text-align: center;
+    font-family: 'Pretendard';
+}
+
+.totalform .formtable td {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px dashed #eee;
+}
+
+.totalform .formtable td img{
+    margin: 0 auto;
+}
+
+.formtable {
+    margin-top: 40px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    /* box-shadow: 1px 1px 10px #e1e5f1; */
+}
+
+.formtable .thspan{
+    background: #eee;
+    padding: 5px 10px;
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: #777;
+}
+
+.formtable .padding_s{
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+
+
+  
+/* 
+    .totalform {
+        padding: 40px 0 50px 0;
+    } */
+
+
+/*e ====PC화면1====*/
+
+
+
+@media screen and (max-width: 1280px){
+	.formtable .thspan{
+		width: 80%;
+	}
+}
+
+
+@media screen and (max-width:1280px) {
+
+    
+#container {
+    width: 90%;
+}
+
+
+#wrap{
+    width: 100%;
+    margin: 80px auto;
+}
+
+
+#container .t_tit {
+    width: 80%;
+    margin-left: 5%;
+}
+
+#container .t_tit .title_img {
+   
+    width: 80%;
+
+}
+.totalform {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    margin: 0 0 50px 0;
+    padding: 20px 0 40px 0;
+
+}
+
+.naver_area ul,
+.naver_area li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.table_wrap{
+	width: 100%; overflow-x: scroll;
+}
+.formtable {
+    width: 150%;
+    margin-top: 40px;
+}
+
+.totalform .formtable th {
+    font-weight: normal;
+    padding: 10px 0;
+    /* font-size: 11px; */
+}
+
+.totalform .formtable td {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px dashed #eee;
+}
+
+
+
+.formtable .thspan{
+    background: #eee;
+    padding: 5px 10px;
+    display: block;
+    width: 62%;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: #777;
+}
+
+.totalform .formtable td img{
+    width: 95%;
+    height:auto;
+}
+
+.formtable .padding_s{
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+
+
+}
+
+
+
+/* ######### 라이브카운트 배너 추가 - 220721 */
+.link_banner_wrap img{
+    width: 100%;
+	margin: 50px auto 0;
+	
+}
+
+@media screen and (max-width: 1200px){
+
+    .link_banner_wrap {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 820px){
+	.formtable{
+		width: 210%;
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+	.totalform .formtable th{
+		font-size: 14px;
+	}
+
+	.formtable {
+		width: 240%;
+	}
+
+
+	.link_banner_wrap{
+		width: 100%;
+	}
+
+
+
+	#footer{
+		margin-top: 0;
+	}
+}
+
+
+
+
+@media screen and (max-width: 480px){
+	textarea::placeholder{
+		font-size: 14px;
+	}
+
+
+	.totalform .t_btn{
+		font-size: 14px;
+		height: 55px;
+	}
+
+	.formtable{
+		width: 320%;
+	}
+}
+
+
+
+
+@media screen and (max-width: 375px){
+	.totalform .btn{
+		width: 100%;
+	}
+	.formtable{
+		width: 340%;
+	}
+}
+
+
+
+
+@media screen and (max-width: 320px){
+	textarea::placeholder{
+		font-size: 11px;
+	}
+
+	.totalform .t_btn{
+		font-size: 12px;	
+		height: 50px;
+	}
+
+
+	.totalform .formtable th{
+		font-size: 11px;
+	}
+
+
+	.formtable{
+		width: 440%;
+	}
+}

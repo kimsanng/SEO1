@@ -1,0 +1,596 @@
+@charset "utf-8";
+
+
+
+
+
+/* @자주 묻는질문 스타일 설정 시작@ */
+#mypage{
+	background-color: var(--sub-bg-color01);
+	/* padding: 80px 0 150px; */
+	padding: 0 !important;
+
+	position: relative; overflow: hidden;
+}
+
+	#mypage .wrapper{
+		/* width: 1450px; display: block; */
+		width: 100% !important;
+		padding-bottom: 0 !important;
+	}
+
+	#mypage .dashboard{
+		display: flex;
+		overflow: hidden;
+		
+		/* box-shadow: 0px 0px 20px var(--gray06); */
+	}
+
+	
+		#mypage .dashboard .board_right{
+			width: 80%; box-sizing: border-box;
+			padding: 60px 55px; background-color: #fff;
+		}
+
+			#mypage .dashboard .board_right .tit_box{
+				display: flex;
+				justify-content: space-between; align-items: center;
+
+				padding-bottom: 20px;
+				border-bottom: 1px solid #e7e7e7;
+			}
+			#mypage .dashboard .board_right .tit_box h2{
+				font-size: 1.875rem; font-weight: 600;
+			}
+			#mypage .dashboard .board_right .tit_box h2 i{
+				display: inline-block;
+					
+				width: 34px; height: 22px;
+
+				background: url(/img/icn_card.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+
+				margin-right: 10px;
+				filter: invert(18%) sepia(39%) saturate(1076%) hue-rotate(313deg) brightness(112%) contrast(68%);
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap{
+				font-size: 1rem;
+				color: #666;
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap a{
+				font-size: inherit;
+				color: inherit;
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap i{
+				font-size: inherit;
+				color: inherit;
+			}
+
+			#mypage .dashboard .board_right .desc{
+				margin-top: 20px;
+				font-size: 0.875rem;
+				color: #afafaf;
+			}
+
+			#mypage .dashboard .board_right .search_box{
+				background-color: var(--light-blue);
+				border-radius: 20px; box-sizing: border-box;
+
+				margin-top: 30px;
+
+				padding: 25px; text-align: center;
+			}
+			#mypage .dashboard .board_right .search_box fieldset{
+				display: flex; gap: 10px;
+				align-items: center;
+			}
+			#mypage .dashboard .board_right .search_box fieldset:not(:last-of-type){
+				margin-bottom: 15px;
+			}
+			#mypage .dashboard .board_right .search_box fieldset label{
+				font-size: 1.0625rem; font-weight: 600;
+			}
+			#mypage .dashboard .board_right .search_box fieldset input{
+				outline: none; border: 1px solid #e8e8e8;
+				border-radius: 5px;
+				transition: 0.4s;
+				font-size: 0.9375rem;
+				box-sizing: border-box; 
+				padding: 10px 15px;
+			}
+			#mypage .dashboard .board_right .search_box fieldset input:focus{
+				border-color: #999;
+			}
+			#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+				width: 500px;
+			}
+			#mypage .dashboard .board_right .search_box fieldset input[type=]{}
+
+			#mypage .dashboard .board_right .search_box .search_keyword{}
+			#mypage .dashboard .board_right .search_box .search_keyword select{}
+			#mypage .dashboard .board_right .search_box .search_keyword select option{}
+
+			#mypage .nice-select{
+				font-size: 0.9375rem;
+			}
+
+
+
+#mypage .dashboard .board_right .search_box .search_date{
+	gap: 20px;
+}
+#mypage .select_btn{
+	display: flex; gap: 5px;
+}
+#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn {
+    		border-radius: 5px;
+		}
+		#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn input[type=radio] {
+			display: none;
+		}
+		#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label {
+			display: block;
+			padding: 10px 15px;
+    		text-align: center;
+    		/* height: -webkit-fill-available; */
+			font-weight: 400;
+			border-radius: 5px;
+			cursor: pointer;
+			border: 1px solid #e8e8e8;
+			transition: 0.4s;
+		}
+		 
+		/* Checked */
+		#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn input[type=radio]:checked + label {
+			background-color: var(--blue);
+			border-color: var(--blue);
+			color: var(--white);
+		}
+		 
+		
+
+		/* Hover */
+		#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label:hover {
+			border-color: var(--blue); color: var(--blue); font-weight: 500;
+		}
+
+		#mypage .dashboard .board_right .search_box  .select_date{}
+		#mypage .dashboard .board_right .search_box  .select_date input{
+			pointer-events: none;
+			width: 120px;
+		}
+
+		#mypage .dashboard .board_right .search_box  .select_date > img{
+			width: 44px;
+
+			margin-left: 10px;
+			cursor: pointer;
+		}
+	
+
+
+
+
+	#mypage .list_pager_wrap{
+		margin-top: 50px;
+
+		display: flex; 
+		justify-content: center; align-items: center;
+	}
+
+		#mypage .list_pager_wrap > a{
+			display: inline-block;
+			width: 9px; height: 13px;
+
+			margin: 0 15px;
+		}
+
+			#mypage .list_pager_wrap > a i{
+				display: inline-block;
+				width: 100%; height: 100%;
+				background: url(/img/icn_pager_arrow.png) no-repeat;
+			}
+
+		#mypage .list_pager_wrap .pager_prev{}
+
+			#mypage .list_pager_wrap .pager_prev i{
+				background-position: top left;
+			}
+
+		#mypage .list_pager_wrap .pager_next{}
+
+			#mypage .list_pager_wrap .pager_next i{
+				background-position: top right;
+			}
+
+		#mypage .list_pager_wrap .pager{
+			display: flex;
+		}
+
+			#mypage .list_pager_wrap .pager li{
+				width: 35px; height: 35px;
+
+				display: flex;
+				justify-content: center; align-items: center;
+			}
+
+				#mypage .list_pager_wrap .pager li a{
+					font-size: 1.125rem; font-weight: 300;
+					transition: 0.4s;
+				}
+					#mypage .list_pager_wrap .pager li:hover a{
+						color: var(--point-color02);
+					}
+
+
+
+			#mypage .list_pager_wrap .pager li.active{
+				background-color: var(--point-color02);
+				border-radius: 50%;
+			}
+				 #mypage .list_pager_wrap .pager li.active a{
+					font-weight: 700; color: #fff;
+				 }
+
+
+		#mypage .dashboard .board_right .search_box .select_payment{
+			gap: 20px;
+		}
+		#mypage .checkbox_wrap{
+			display: flex; width: 50%;
+			gap: 50px;
+		}
+		#mypage  .must_check {
+            position: relative;
+			display: flex;
+			align-items: center;
+
+        }
+
+        #mypage  .must_check input {
+            position: absolute;
+            top: 4px;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 5;
+            width: 20px;
+            height: 20px;
+            font-family: 'Noto sans', sans-serif;
+        }
+
+        #mypage  .must_check>i {
+            display: block;
+            background: url(/img/checkbox.png) no-repeat left top;
+            width: 20px;
+            height: 20px;
+            float: left;
+            z-index: 3;
+        }
+
+        #mypage  .must_check>input:checked+i {
+            background-position: left bottom;
+        }
+		 #mypage  .must_check p{
+			margin-left: 5px;
+		 }
+
+		 #mypage .btn_submit{
+			outline: none; background-color: var(--blue);
+			padding:  10px 25px; border-radius: 5px;
+
+			margin-top: 10px;
+
+			transition: 0.4s;
+		 }
+		 #mypage .btn_submit:hover{
+			background-color: var(--blue-hover);
+		 }
+
+
+		 #mypage .history_table{
+			margin-top: 25px;
+			border-radius: 20px; overflow: hidden;
+		 }
+		 	#mypage .history_table li{
+				box-sizing: border-box;
+				padding: 25px 0;
+
+				display: flex;
+			}
+				#mypage .history_table li:nth-child(odd){
+					background-color: var(--light-blue);
+				}
+
+			#mypage .history_table li span{
+				display: inline-block; box-sizing: border-box;
+				text-align: center;
+			}
+			#mypage .history_table li.thead{
+				background-color: var(--blue);
+			}
+			#mypage .history_table .thead span{
+				color: #fff; font-weight: 700; 
+				font-size: 1.125rem;
+			}
+			#mypage .history_table .thead .th_num{
+				width: 13%;
+			}
+			#mypage .history_table .thead .th_order_num{
+				width: 30%;
+			}
+			#mypage .history_table .thead .th_package{
+				width: 22%;
+			}
+			#mypage .history_table .thead .th_date{
+				width: 15%;
+			}
+			#mypage .history_table .thead .th_amount{
+				width: 20%;
+			}
+
+
+			#mypage .history_table .tbody span{}
+			#mypage .history_table .tbody .td_num{
+				width: 13%;
+			}
+			#mypage .history_table .tbody .td_order_num{
+				width: 30%;
+			}
+			#mypage .history_table .tbody .td_package{
+				width: 22%;
+			}
+			#mypage .history_table .tbody .td_date{
+				width: 15%;
+			}
+			#mypage .history_table .tbody .td_amount{
+				width: 20%;
+			}
+
+		
+@media screen and (max-width:1500px){
+	#mypage .wrapper{
+		width: 90%;
+	}
+}
+@media screen and (max-width:1280px){
+	.tit_banner{
+		padding-top: 0;
+	}
+
+	#mypage .dashboard .board_right .search_box .search_date{
+		gap:19px;
+	}
+}
+@media screen and (max-width:1200px){
+	.tit_banner .background .wrapper{
+		padding: 87px 0 97px;
+	}
+	#mypage .select_btn{
+		font-size: 13px;
+		gap:4px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset label{font-size: 13px;}
+	#mypage .dashboard .board_right .search_box .search_date{
+		gap: 13px;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		padding-top:10px;
+	}
+	#mypage .history_table .tbody .td_num{
+		padding-top: 10px;
+	}
+	#mypage .history_table .tbody .td_package{
+		padding-top:10px;
+	}
+	#mypage .history_table .tbody .td_amount{
+		padding-top: 10px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li a{
+		padding: 30px 26px;
+	}
+}
+
+@media screen and (max-width:1024px){
+	#mypage .dashboard .board_right{
+		width: 75%;
+	}
+
+	#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+		width: 409px;
+	}
+	#mypage .dashboard .board_right .search_box .search_date{
+		display: block;
+	}
+	#mypage .dashboard .board_right .search_box fieldset label{
+		font-size: 18px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 31.5px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn{
+		margin: 15px 0 20px 0;
+	}
+	#mypage .select_btn{
+		gap: 15px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 170px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-left: 18px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset:not(:last-of-type){
+		margin-bottom: 25px;
+	}
+	#mypage .history_table .thead span{
+		font-size: 0.9rem;
+	}
+	#mypage .history_table li span{
+		font-size: 0.85rem;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		width: 28%;
+	}
+	#mypage .history_table .thead .th_order_num{
+		width: 28%;
+	}
+	#mypage .history_table .thead .th_package{
+		width: 24%;
+	}
+	#mypage .history_table .tbody .td_package{
+		width: 24%;
+	}
+}
+
+@media screen and (max-width:800px){
+	
+	#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+		width: 81%;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 22.5px;
+		font-size: 13px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset>label{
+		width: 20%;
+	}
+	#mypage .select_btn{
+		gap: 13px;
+		width: 100%;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 134px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-left: 4px;
+	}
+	#mypage .history_table_wrap{
+		overflow: scroll;
+	}
+	#mypage .history_table{
+		width: 900px;
+	}
+	#mypage .history_table .tbody .td_num{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_package{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_amount{
+		padding-top: 0;
+	}
+
+}
+
+@media screen and (max-width:600px){
+	.tit_banner .background .wrapper{
+		padding: 40px 0 41px;
+	}
+	.tit_banner .background .txt_box h2{
+		font-size: 2rem;
+	}
+	.tit_banner .background .txt_box p{
+		margin-top: 16px;
+	}
+	.tit_banner .background .icn_box i{
+		width: 75% !important;
+		height: 75% !important;
+		background-size: auto 100% !important;
+	}
+
+	#mypage .dashboard .board_right{
+		width: 100%;
+	}
+	#mypage .dashboard .board_left .member_profile{
+		margin-top: 0;
+		padding-top: 60px;
+	}
+	#mypage .dashboard{
+		display: block;
+	}
+
+	#mypage .history_table li{
+		padding: 12px 0;
+		align-items: center;
+	}
+
+	
+
+}
+
+@media screen and (max-width:500px){
+	#mypage .dashboard .board_right .tit_box h2{
+		font-size: 1.8rem;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 17.5px;
+	}
+	#mypage .select_btn{
+		gap: 3px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 215px;
+		height: 40px;
+		margin-bottom: 15px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		width: 40px;
+		height: 40px;
+		margin-top: -16px;
+	}
+	#mypage{
+		padding: 80px 0 100px;
+	}
+	
+}
+@media screen and (max-width:480px){
+	.tit_banner .background .icn_box{
+		width: 60%;
+		height: 60%;
+		opacity: 1;
+		background-size: auto 100%;
+	}
+	#mypage .dashboard .board_right{
+		padding: 50px 25px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 15.5px;
+		display: block;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		margin-bottom: 11px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-top: -14px;
+	}
+	#mypage .history_table{
+		width: 845px;
+	}
+
+}
+
+@media screen and (max-width:390px){
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		font-size: 11px;
+		padding: 10px 14.5px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 193px;
+	}
+	#mypage .dashboard .board_right .tit_box h2{
+		font-size: 1.2rem;
+	}
+	#mypage .dashboard .board_right .tit_box h2 i{
+		width: 27px;
+		height: 17px;
+	}
+	#mypage .dashboard .board_right .desc{
+		font-size: 0.7rem;
+	}
+
+}

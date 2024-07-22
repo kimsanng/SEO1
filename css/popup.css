@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+
+
+.popup{
+            /* width: 500px;
+            height: auto; */
+             position:fixed;
+            
+			
+			/* width: auto;
+			height: 57vh; */
+
+			width: 500px; height: auto;
+
+
+        }
+		
+		.popup#pop1{
+			top: 18%;
+            right: 32%;
+		  /*  left: 13%; */
+			z-index: 99999999;
+		}
+		.popup#pop2{
+			top: 18%;
+            right: 5%;
+			/* left: 36%; */
+			z-index: 99999999;
+		}
+
+        .popup#pop3{
+			top: 18%;
+            /* left: 17%; */
+			z-index: 999999999;
+			width:500px;
+			right: 12%;
+		}
+
+        .popup .cont{
+           width: 100%;
+            height: auto; 
+           
+            background: #ccc;
+
+			/* width: auto; height: 100%; */
+        }
+        
+		 .popup .cont figure{
+			width: auto;
+			/* height: 100%; */
+			width: 100%;
+		 }
+
+        .popup .cont img{
+            width: 100%;
+			/* height: 100%; */
+        }
+        
+        .close{
+            width: 100%;
+            height: 30px;
+            background: #fff;
+            position: absolute;
+            
+            /* background: #333; */
+			background-color: var(--blue-hover);
+            z-index: 99;
+        }
+        
+        .close label{
+            color: #fff;
+            font-size: 13px;
+            line-height: 30px;
+            padding-left: 2%;
+        }
+        
+        .close input{
+            margin-left: 2%;
+            cursor: pointer;
+        }
+        .close .close_btn{
+            cursor: pointer;
+            float: right;
+            font-size: 15px;
+            line-height: 30px;
+            padding-right: 2%;
+            color: #fff;
+        }
+
+
+
+
+	@media screen and (max-width: 1024px ){
+		.popup{
+			width: 50%;
+			height: auto;
+			right: auto; left: 50% !important;
+			top: 50% !important;
+			transform: translate(-50%,-50%);
+		}
+
+		.popup .cont{
+            width: 100%;
+            height: auto;
+		}
+
+		.popup .cont figure{
+			width: 100%;
+			height: auto;
+		 }
+
+        .popup .cont img{
+            width: 100%;
+			height: auto;
+        }
+        
+
+
+	}
+
+
+	@media screen and (max-width: 912px){
+		.popup{ width: 70%; }
+	}
+
+
+
+	@media screen and (max-width: 480px){
+		.popup{ width: 90%; }
+		
+		.close label{ font-size: 12px; }
+		.close #close{ font-size: 13px; }
+
+		.popup#pop3{
+			width: 90%;
+		}
+	}
+
+

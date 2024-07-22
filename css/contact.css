@@ -1,0 +1,678 @@
+@charset "utf-8";
+
+#subNav .wrapper{
+	padding-bottom: 0 !important;
+}
+
+#sec01{
+
+}
+
+#sec01 .wrapper{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding-top: 50px !important;
+}
+
+#sec01 .left-box{
+	width: 40%;
+	position: sticky;
+    top: 150px;
+    align-self: flex-start;
+}
+
+#sec01 .left-box .tit{}
+
+#sec01 .left-box .step-box{
+	margin-top: 100px;
+	position: relative;
+}
+
+#sec01 .left-box .step-box .line{
+	width: 1px; height: 95%;
+	background-color: var(--gray05);
+	position: absolute;
+	top: 50%; left: calc( 35px / 2 );
+	transform: translateY(-50%);
+	z-index: -1;
+}
+
+#sec01 .left-box .step-box .line .line-inner{
+	width: 100%; height: 0;
+	background-color: var(--blue);
+	position: absolute;
+	top: 0; left: 0;
+	transition: 0.4s;
+}
+
+#sec01 .left-box .step-box ul{}
+
+#sec01 .left-box .step-box ul li{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 45px;
+}
+
+#sec01 .left-box .step-box ul li .circle{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray05);
+  border-radius: 50%;
+  background-color: var(--white);
+  transition: 0.4s;
+  position: relative;
+}
+
+
+#sec01 .left-box .step-box ul li.active .circle{
+	border-color: var(--blue);
+}
+
+#sec01 .left-box .step-box ul li .circle .checkmark {
+  width :100%; height: 100%;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px var(--blue);
+  position: relative;
+  z-index: 2;
+}
+
+#sec01 .left-box .step-box ul li.done .circle .checkmark{
+	animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+
+#sec01 .left-box .step-box ul li .circle .checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: var(--blue);
+  fill: none;
+  
+}
+
+#sec01 .left-box .step-box ul li.done .circle .checkmark__circle{
+	animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+
+#sec01 .left-box .step-box ul li .circle .checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  
+}
+
+#sec01 .left-box .step-box ul li.done .circle .checkmark__check{
+	animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px var(--blue);
+  }
+}
+
+#sec01 .left-box .step-box ul li .text{}
+
+#sec01 .left-box .step-box ul li .text span{
+	font-size: 0.875rem;
+	font-weight: 800;
+	color: var(--blue);
+}
+
+#sec01 .left-box .step-box ul li .text p{
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--gray05);
+	transition: 0.4s;
+}
+
+#sec01 .left-box .step-box ul li.active .text p{
+	color: var(--black);
+}
+
+
+#sec01 .right-box{
+	width: 60%;
+}
+
+#sec01 .right-box .inform-box{}
+
+#sec01 .right-box .inform-box h4{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	gap: 10px;
+	font-size: 1.4375rem;
+	font-weight: 800;
+}
+
+#sec01 .right-box .inform-box h4 i{
+	display: block;
+	width: 35px; height: 35px;
+	background: url(/img/icn_noti.png) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+#sec01 .right-box .inform-box .inform-list{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 35px 30px;
+	background-color: var(--light-blue);
+	border-radius: 20px;
+}
+
+#sec01 .right-box .inform-box .inform-list li{
+	font-size: 1rem;
+	color: var(--gray01);
+}
+
+#sec01 .right-box .inform-box .inform-list li:not(:first-of-type){
+	margin-top: 10px;
+}
+
+#sec01 .right-box .inform-box .inform-list li strong{
+	color: var(--black);
+	font-size: inherit;
+	font-weight: 700;
+}
+
+
+#contact__form{}
+
+
+#contact__form fieldset{}
+
+#contact__form fieldset legend{
+	font-size: 2.8125rem;
+	font-weight: 800;
+	line-height: 1.3;
+}
+
+#contact__form fieldset legend span{
+	display: inline-block;
+	font-size: 1.4375rem;
+	font-weight: 800;
+	color: var(--blue);
+}
+
+#contact__form fieldset .tit_desc{
+	font-weight: 500;
+}
+
+#contact__form fieldset > ul{}
+
+#contact__form fieldset > ul > li{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25px 30px;
+	border-radius: 20px;
+	border: 1px solid var(--gray06);
+	background-color: var(--white);
+}
+
+#contact__form fieldset > ul > li:not(:first-of-type){
+	margin-top: 10px;
+}
+
+#contact__form fieldset > ul > li h4{
+	position: relative;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: 800;
+}
+
+
+#contact__form fieldset > ul li label{
+	font-size: 1.25rem;
+	font-weight: 800;
+	position: relative;
+}
+
+#contact__form fieldset > ul li input{
+	display: inline-block;
+	width: 65%;
+	border: 0;
+	outline: none;
+	font-size: 1.25rem;
+}
+
+#contact__form fieldset > ul li input::placeholder,
+#contact__form fieldset > ul li textarea::placeholder{
+	color: var(--gray05);
+}
+
+#contact__form .contact-item-box > ul li input[type=text],
+#contact__form fieldset > ul li textarea{
+	border: 1px solid var(--gray06);
+	width: 100%;
+	padding: 20px 25px;
+	border-radius: 20px;
+}
+
+
+#contact__form fieldset > ul li textarea{
+	height: 255px;
+	font-size: 1.25rem;
+	resize: none;
+}
+
+
+#contact__form .funnels-box > ul > li,
+#contact__form .contact-item-box > ul > li,
+#contact__form .contact-content-box > ul > li{
+	padding: 0;
+	border: 0;
+}
+
+
+#contact__form .contact-item-box > ul > li{
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: transparent;
+}
+
+
+
+#contact__form .type-list{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+}
+
+#contact__form .type-list .must_check{
+	position: relative;
+	width: calc( (100% - 40px) / 3 );
+}
+
+#contact__form .type-list .must_check label{
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 0;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 800;
+	color: var(--gray05);
+	border: 1px solid var(--gray06);
+	background-color: var(--white);
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+
+#contact__form .type-list .must_check input{
+	position:absolute;
+	opacity: 0;
+	top: 0; left: 0;
+}
+
+
+#contact__form .type-list .must_check input:checked+label{
+	color: var(--white);
+	background-color: var(--blue);
+}
+
+#contact__form .nice-select{
+	width: 100%;
+	height: auto;
+	line-height: 1;
+	box-sizing: border-box;
+	padding: 25px 30px;
+	border-radius: 20px;
+}
+
+#contact__form .nice-select .current{
+	font-size: 1.25rem;
+	font-weight: 800;
+	position: relative;
+}
+
+#contact__form .nice-select::after {
+    border-bottom: 2px solid var(--gray05);
+    border-right: 2px solid var(--gray05);
+	width: 10px;
+    height: 10px;
+	right: 35px;
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg);
+	transition: 0.4s;
+}
+
+#contact__form .nice-select.open::after{
+	transform: translateY(-50%) rotate(-135deg);
+} 
+
+
+#contact__form .nice-select .current::after,
+#contact__form .required::after{
+	content: "*";
+	font-size: 1.25rem;
+	font-weight: 800;
+	color: var(--yellow);
+	position: absolute;
+	top: -3px; right: -1.25rem;
+}
+
+
+#contact__form .nice-select.open .list{
+	width: 100%;
+}
+
+#contact__form .nice-select .option{
+	padding: 10px 25px;
+	font-size: 1.125rem;
+}
+
+
+#contact__form .policy-box{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
+	position: relative;
+}
+
+#contact__form .policy-box label{
+	display: inline-block;
+	position: relative;
+	font-size: 1.4375rem;
+	font-weight: 800;
+}
+
+#contact__form .policy-box label a{
+	display: inline-block;
+	padding-bottom: 3px;
+	border-bottom: 2px solid var(--blue);
+	font-size: inherit;
+	font-weight: inherit;
+	color: var(--blue);
+}
+
+
+#contact__form .policy-box input{
+	position:absolute;
+	width: 30px; height: 30px;
+	z-index: 2;
+	opacity: 0;
+	top: 0; left: 0;
+	cursor: pointer;
+}
+
+#contact__form .policy-box i{
+	display: block;
+	width: 30px; height: 30px;
+	background: url(/img/checkbox.png) no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+
+
+#contact__form .policy-box input:checked+i{
+	background-position: center bottom;
+}
+
+
+#contact__form .btn_submit{
+	width: 100%;
+	border: 1px solid var(--blue);
+	justify-content: center;
+	color: var(--blue);
+	transition: 0.4s;
+	background-color: var(--white);
+	border-radius: 100px;
+}
+
+#contact__form .btn_submit:hover{
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+#contact__form .btn_submit span{
+	font-size: 2.8125rem;
+}
+
+
+
+@media screen and (max-width: 1500px){}
+
+@media screen and (max-width: 1300px){}
+
+@media screen and (max-width: 1100px){
+	#sec01{
+		position: relative;
+	}
+
+	#sec01 .wrapper{
+		flex-direction: column;
+		gap: 50px;
+		position: static;
+	}
+	
+	#sec01 .left-box,
+	#sec01 .right-box{
+		width: 100%;
+	}
+
+	#sec01 .left-box{
+		position: static;
+	}
+
+
+	#sec01 .left-box .step-box{
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		z-index: 5;
+		padding: 30px 0;
+		background-color: var(--light-blue);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#sec01 .left-box .step-box .line{
+		width: 40%; height: 1px;
+		top: calc( 30px + (33px / 2) ) ; left: 50%;
+		transform: translateX(-50%);
+	}
+	
+	#sec01 .left-box .step-box ul{
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		justify-content: center;
+		gap: 50px;
+	}
+
+	#sec01 .left-box .step-box ul li{
+		margin-top: 0 !important;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		width: calc( (100% - 150px) / 4  );
+	}
+
+	#sec01 .left-box .step-box ul li .text{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	#contact__form .btn_submit{}
+
+	#contact__form .btn_submit span{
+		font-size: 2.5rem;
+	}
+
+		#sec01 .left-box .step-box ul{
+		width: 70%;
+	}
+
+	#sec01 .left-box .step-box .line{
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 767px){
+	#sec01 .right-box .inform-box h4{
+		font-size: 1.375rem;
+	}
+	#sec01 .right-box .inform-box h4 i{
+		width: 27px; height: 27px;
+	}
+
+	#sec01 .right-box .inform-box .inform-list{
+		padding: 25px 15px;
+	}
+
+	#sec01 .right-box .inform-box .inform-list li:not(:first-of-type){
+		margin-top: 5px;
+	}
+
+	#contact__form fieldset legend span{
+		font-size: 1.25rem;
+	}
+
+	#contact__form fieldset legend{
+		font-size: 2.375rem;
+	}
+
+	#contact__form fieldset > ul > li{
+		padding: 20px;
+	}
+
+	#contact__form .nice-select .current::after, #contact__form .required::after{
+		font-size: 1.0625rem;
+	}
+
+	#contact__form fieldset > ul li label{
+		font-size: 1.0625rem;
+	}
+
+	#contact__form fieldset > ul li input{
+		font-size: 1.0625rem;
+	}
+
+	#contact__form .nice-select{
+		padding: 20px;
+	}
+
+	#contact__form .nice-select .current{
+		font-size: 1.0625rem;
+	}
+
+	#contact__form .nice-select::after{
+		width: 8px; height: 8px;
+	}
+
+	#contact__form .nice-select.open .list{
+		margin-top: 1px;
+	}
+
+	#contact__form .nice-select .option{
+		font-size: 1.0625rem;
+		height: auto;
+		line-height: 1;
+		
+	}
+
+	#contact__form fieldset > ul > li h4{
+		font-size: 1.0625rem;
+	}
+
+	#contact__form .type-list{
+		gap: 10px;
+	}
+
+	#contact__form .type-list .must_check {
+		position: relative;
+		width: calc( (100% - 20px) / 3 );
+	}
+
+	#contact__form .type-list .must_check label{
+		font-size: 1.0625rem;
+	}
+
+	#contact__form .contact-item-box > ul li input[type=text], #contact__form fieldset > ul li textarea{
+		padding: 20px;
+	}
+
+	#contact__form fieldset > ul li textarea{
+		font-size: 1.0625rem;
+		height: 230px;
+	}
+
+	#contact__form .policy-box{
+		gap: 10px;
+	}
+	#contact__form .policy-box input{
+		width: 22px; height: 22px;
+	}
+	#contact__form .policy-box i{
+		width: 22px; height: 22px;
+	}
+
+	#contact__form .policy-box label{
+		font-size: 1.25rem;
+	}
+
+	#contact__form .btn_submit span{
+		font-size: 1.625rem;
+	}
+
+
+	
+	#sec01 .left-box .step-box ul{
+		width: 90%;
+	}
+	#sec01 .left-box .step-box ul li .text{
+		flex-direction: column;
+		gap: 2px;
+	}
+	#sec01 .left-box .step-box ul li .circle{
+		width: 32px; height: 32px;
+	}
+	#sec01 .left-box .step-box .line {
+		width: 75%;
+	}
+	#sec01 .left-box .step-box ul li .text p{
+		font-size: 1.0625rem;
+	}
+}
+
+@media screen and (max-width: 320px){}

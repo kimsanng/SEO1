@@ -1,0 +1,566 @@
+@charset "utf-8";
+
+#board .sch_word{
+	font-size: inherit;
+	font-weight: inherit;
+	color: var(--blue);
+	background-color: var(--light-blue);
+}
+
+
+#board.notice{}
+
+#board .wrapper{
+	padding-top: 0 !important;
+}
+
+#board #list{
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#board #list thead{
+	border-top: 2px solid var(--black);
+	background-color: var(--light-blue);
+}
+
+#board #list thead tr{}
+
+
+#board #list thead tr th,
+#board #list tbody tr td{
+	box-sizing: border-box;
+	padding: 25px 30px;
+}
+
+#board #list thead tr th{
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+#board #list thead tr th.th_num{
+	width: 10%;
+}
+
+#board #list thead tr th.th_subj{
+	width: 70%;
+}
+
+#board #list thead tr th.th_date{
+	width: 20%;
+}
+
+#board #list tbody{}
+
+#board #list tbody tr{
+	border-bottom: 1px solid var(--gray06);
+}
+
+#board #list tbody tr td{
+	text-align: center;
+	font-size: 1rem;
+	color: var(--gray02);
+}
+
+#board #list tbody tr td.td_num{}
+
+#board #list tbody tr td.td_subj{
+	text-align: left;
+	font-size: 1.4375rem;
+	font-weight: 700;
+}
+
+#board #list tbody tr td.td_subj a{
+	display: block;
+	text-align: left;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+
+#board #list tbody tr td.td_subj a span{
+	font-size: inherit;
+	font-weight: inherit;
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--black);
+	transition: 0.4s;
+}
+
+#board #list tbody tr td.td_subj:hover a span{
+	color: var(--blue);
+}
+
+
+#board #list tbody tr td.td_date{}
+
+
+#board  .board-btn-box{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 15px;
+}
+
+#board  .board-btn-box li{}
+
+#board  .board-btn-box li a{
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+#board  .board-btn-box li a:hover{
+	background-color: var(--blue-hover);
+}
+
+#board  .board-btn-box li a span{}
+
+
+#board  .board-list-pagination{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0px;
+}
+
+#board  .board-list-pagination li{}
+
+#board  .board-list-pagination li a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.125rem;
+	color: var(--gray05);
+	font-weight: 500;
+	width: 40px; height: 40px;
+	background-color: transparent;
+	border-radius: 50%;
+}
+
+#board  .board-list-pagination li.active a{
+	font-weight: 800;
+	color: var(--white);
+	background-color: var(--blue);
+}
+
+#board.view .board-btn-box li .btn_edit{
+	background-color: var(--white) !important;
+	border: 1px solid var(--blue);
+	color: var(--blue);
+}
+
+#board.view .board-btn-box li .btn_edit:hover{
+	background-color: var(--white) !important;
+	border: 1px solid var(--blue-hover);
+	color: var(--blue-hover);
+}
+
+
+#board #write{
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid var(--black);
+}
+
+#board #write fieldset{
+	text-align: left;
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	background-color: var(--light-blue);
+	border-bottom: 1px solid var(--gray06);
+}
+
+#board #write fieldset label,
+#board #write fieldset > div{
+	box-sizing: border-box;
+	padding: 20px 35px;
+}
+
+#board #write fieldset label{
+	width: 15%;
+	font-size: 1.25rem;
+	font-weight: 800;
+}
+
+#board #write fieldset > div{
+	width: 85%;
+	background-color: var(--white);
+}
+
+#board #write fieldset > div input,
+#board #write fieldset > div textarea{
+	width: 100%;
+	border: 1px solid var(--gray06);
+	transition: 0.4s;
+	border-radius: 20px;
+	font-size: 1.125rem;
+	box-sizing: border-box;
+	padding: 15px 25px;
+}
+
+#board #write fieldset > div textarea{
+	resize: none;
+	min-height: 300px;
+}
+
+#board #write fieldset > div input:hover,
+#board #write fieldset > div textarea:hover,
+#board #write fieldset > div input:focus,
+#board #write fieldset > div textarea:focus{
+	border-color: var(--gray05);
+}
+
+#board #write fieldset > div input::placeholder,
+#board #write fieldset > div textarea::placeholder{
+	color: var(--gray05);
+}
+
+#board #write .btn_submit{
+	background-color: var(--blue);
+}
+
+#board #write .btn_submit:hover{
+	background-color: var(--blue-hover);
+}
+
+#board #write .btn_submit span{
+	color: var(--white);
+}
+
+#board #write .btn_cancel{
+	background-color: var(--white);
+	border: 1px solid var(--blue);
+	color: var(--blue);
+}
+
+
+#board #write .btn-list{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+#board #write .filebox{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+#board #write .filebox .upload-name{
+    width: 78%;
+	background-color: var(--white);
+	color: var(--gray05);
+	pointer-events: none;
+}
+
+#board #write .filebox label:not(.delete_wrap label){
+    display: inline-block;
+    color: #fff;
+	background-color: var(--blue);
+    cursor: pointer;
+	padding: 0;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#board #write .filebox input[type="file"]{
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#board #write .filebox .delete_wrap{
+	display: flex;
+	width: 100%;
+	gap: 5px;
+}
+
+#board #write .filebox .delete_wrap input{
+	width: auto;
+}
+
+#board #write .filebox .delete_wrap label{
+	width: auto;
+	padding: 0;
+	font-size: 0.9375rem;
+	font-weight: 400;
+	color: var(--gray03);
+}
+
+#board #view{}
+
+#board #view .view_info{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 25px 35px;
+	background-color: var(--blue-hover);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--white);
+}
+
+#board #view .view_info h4{
+	color: var(--whtie);
+	font-size: 1.4375rem;
+	max-width: 80%;
+	font-weight: 600;
+	color: inherit;
+}
+
+#board #view .view_info p{
+	font-size: 1.125rem;
+	color: inherit;
+}
+
+#board #view .view_content{
+	min-height: 300px;
+	box-sizing: border-box;
+	padding: 60px;
+	border-bottom: 1px solid var(--gray06);
+}
+
+#board #view .view_content img,
+#board #view .view_content video,
+#board #view .view_content iframe{
+	max-width: 100%;
+}
+
+
+
+#board .board-view-pagination{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+#board .board-view-pagination .left-box .arr,
+#board .board-view-pagination .right-box .arr{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 15px;
+	color: var(--gray02);
+	font-weight: 600;
+	font-size: 1.125rem;
+	transition: 0.4s;
+}
+
+#board .board-view-pagination .left-box .arr:hover,
+#board .board-view-pagination .right-box .arr:hover{
+	color: var(--blue);
+}
+
+#board .board-view-pagination .left-box .arr i,
+#board .board-view-pagination .right-box .arr i,
+#board .board-view-pagination .left-box .arr span,
+#board .board-view-pagination .right-box .arr span{
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+#board .board-view-pagination .left-box .arr span,
+#board .board-view-pagination .right-box .arr span{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 3px;
+}
+
+#board .board-view-pagination .left-box .arr span em,
+#board .board-view-pagination .right-box .arr span em{
+	font-style: normal;
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+#board .board-view-pagination .left-box .arr{}
+
+#board .board-view-pagination .left-box .arr i{}
+
+#board .board-view-pagination .left-box .arr span{}
+
+#board .board-view-pagination .left-box .arr span em{}
+
+#board .board-view-pagination .center-box{}
+
+#board .board-view-pagination .center-box .btn{
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+#board .board-view-pagination .center-box .btn:hover{
+	background-color: var(--blue-hover);
+}
+
+#board .board-view-pagination .center-box .btn span{}
+
+
+#board .board-view-pagination .right-box .arr{
+	flex-direction: row-reverse;
+}
+
+#board .board-view-pagination .right-box .arr i{}
+
+#board .board-view-pagination .right-box .arr span{}
+
+#board .board-view-pagination .right-box .arr span em{}
+
+
+
+@media screen and (max-width: 1500px){}
+
+@media screen and (max-width: 1300px){}
+
+@media screen and (max-width: 1100px){
+	#board #list thead tr th, #board #list tbody tr td{
+		padding: 20px 25px;
+	}
+
+	#board #list thead tr th,
+	#board #write fieldset label{
+		font-size: 1.125rem;
+	}
+
+	#board #list tbody tr td.td_subj{
+		font-size: 1.375rem;
+	}
+
+	#board #write fieldset > div input, #board #write fieldset > div textarea,
+	#board #view .view_info p{
+		font-size: 1.0625rem;
+	}
+	
+
+	#board #view .view_info{
+		padding: 22px 25px;
+	}
+	#board #view .view_info h4{
+		font-size: 1.25rem;
+	}
+
+	#board #view .view_content{
+		padding: 50px 60px;
+	}
+
+	#board .board-view-pagination .left-box .arr, #board .board-view-pagination .right-box .arr{
+		font-size: 1.0625rem;
+	}
+}
+
+@media screen and (max-width: 900px){}
+
+@media screen and (max-width: 767px){
+	
+	#board .board-btn-box{
+		gap: 10px;
+	}
+
+	#board #list thead tr th, #board #list tbody tr td{
+		padding: 15px;
+	}
+	#board #list thead tr th,
+	#board #write fieldset label{
+		font-size: 1.0625rem;
+	}
+	
+	#board #list thead tr th.th_subj{
+		display: width: 60%;
+	}
+
+	#board #list tbody tr td.td_subj{
+		font-size: 1.0625rem;
+	}
+
+	#board #list thead tr th.th_num,
+	#board #list tbody tr td.td_num{
+		display: none;
+	}
+
+	#board .board-list-pagination li a,
+	#baord.list .pg_current,
+	#board.list .pg_page{
+		width: 30px; height: 30px;
+		font-size: 1rem;
+	}
+
+	#board #write fieldset{
+		flex-direction: column;
+	}
+	
+	#board #write fieldset label,
+	#board #write fieldset > div{
+		width: 100%;
+		padding: 15px 20px;
+	}
+
+	#board #write fieldset > div input, #board #write fieldset > div textarea{
+		padding: 12px 20px;
+	}
+	
+	#board #view .view_info {
+		padding: 17px 20px;
+	}
+
+	#board #view .view_info h4{
+		font-size: 1.0625rem;
+	}
+
+	#board #view .view_info p{
+		font-size: 1rem;
+	}
+	
+	#board #view .view_content{
+		padding: 30px;
+		min-height: 200px;
+	}
+
+	
+	#board .board-view-pagination .left-box .arr, #board .board-view-pagination .right-box .arr{
+		gap: 10px;
+	}
+	#board .board-view-pagination .left-box .arr span em,
+	#board .board-view-pagination .right-box .arr span em{
+		display: none;
+	}
+	
+	#board #write .filebox{
+		flex-direction: column;
+		gap: 0;
+	}
+	
+	#board #write .filebox .upload_name{
+		width: 100%;
+	}
+
+	#board #write .filebox label{
+		width: 100%;
+		padding: 12px 20px;
+	}
+
+	
+
+}
+
+@media screen and (max-width: 320px){}

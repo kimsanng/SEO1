@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+
+
+
+
+/* @자주 묻는질문 스타일 설정 시작@ */
+#mypage{
+	background-color: var(--sub-bg-color01);
+
+	position: relative; overflow: hidden;
+	padding: 0 !important;
+}
+
+	#mypage .wrapper{
+		width: 100% !important; display: block;
+		padding-bottom: 0 !important;
+	}
+
+	#mypage .dashboard{
+		display: flex;
+		overflow: hidden;
+	}
+
+		
+		#mypage .dashboard .board_right{
+			width: 80%; box-sizing: border-box;
+			padding: 60px 55px; background-color: #fff;
+
+			text-align: center;
+		}
+
+			#mypage .dashboard .board_right .tit_box{
+				display: flex;
+				justify-content: space-between; align-items: center;
+
+				padding-bottom: 20px;
+				border-bottom: 1px solid #e7e7e7;
+			}
+			#mypage .dashboard .board_right .tit_box h2{
+				font-size: 1.875rem; font-weight: 600;
+			}
+			#mypage .dashboard .board_right .tit_box h2 i{
+				display: inline-block;
+				filter: invert(18%) sepia(39%) saturate(1076%) hue-rotate(313deg) brightness(112%) contrast(68%);
+					
+				width: 29px; height: 29px;
+
+				background: url(/img/icn_member.png) no-repeat;
+				background-size: cover;
+				background-position: center;
+
+				margin-right: 10px;
+
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap{
+				font-size: 1rem;
+				color: #666;
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap a{
+				font-size: inherit;
+				color: inherit;
+			}
+			#mypage .dashboard .board_right .tit_box .siteMap i{
+				font-size: inherit;
+				color: inherit;
+			}
+
+			#mypage .dashboard .board_right .desc{
+				margin-top: 20px;
+				font-size: 0.875rem;
+				color: #afafaf;
+				text-align: left;
+			}
+
+			#mypage .dashboard .board_right #profile{
+				margin-top: 30px; border-radius: 50px;
+				box-sizing: border-box;
+
+				padding: 40px 45px;
+			}
+
+			#mypage .dashboard .board_right #profile input:not([type=file]):not([type=submit]){
+				outline: none; border: 1px solid #e8e8e8;
+				border-radius: 5px;
+				transition: 0.3s;
+				font-size: 0.9375rem;
+				box-sizing: border-box; 
+				padding: 10px 15px;
+				width: 300px;
+			}
+			#mypage .dashboard .board_right #profile input:focus{
+				border-color: #999;
+			}
+
+			#mb_id{
+				pointer-events: none;
+			}
+
+			#mypage .dashboard .board_right #profile table{
+				width: 100%; box-sizing: border-box;
+				text-align: left;
+			}
+
+			
+.filebox{
+	margin-top: 10px;
+}
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.filebox label {
+	padding: 10px 15px;
+	background-color: var(--blue);
+	border-radius: 5px;
+	color: #fff; font-weight: 600;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.filebox label:hover{
+	background-color: var(--blue-hover);
+}
+
+
+/* named upload */
+.filebox .upload-name {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+
+#mypage #profile label:not(.profile label){
+	font-size: 1.125rem; font-weight: 600;
+	text-align: left;
+
+	position: relative;
+	padding-left: 20px;
+}
+#mypage #profile .profile label{
+	font-size: 1.125rem; foont-weight: 600;
+	text-align: left;
+}
+.required{
+	background-image: none !important;
+}
+#mypage #profile label.required::before{
+	content: "*";
+	font-size: 1.25rem; font-weight: 700;
+	color: var(--yellow);
+	position: absolute;
+	top: 50%; left: 0;
+	transform: translateY(-50%);
+}
+
+#mypage #profile th{
+	text-align: left;
+	padding-left: 50px !important;
+
+	width: 30%;
+
+}
+
+#mypage #profile tr:nth-of-type(2n){
+	background-color: var(--light-blue);
+}
+
+#mypage #profile th,
+#mypage #profile td{
+	padding: 25px 0;
+}
+
+#mypage #profile .profile{}
+#mypage #profile .profile th,
+#mypage #profile .profile td{
+	padding-bottom: 45px;
+}
+
+#mypage #profile .profile .img_box{
+	width: 170px; height: 170px;
+	border-radius: 50%;
+	overflow: hidden;
+
+	position: relative;
+}
+
+#mypage #profile .profile .img_box img{
+	position: absolute;
+	width: 100%;
+	top: 50%; left: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+
+
+
+
+		#mypage .btn_submit{
+			outline: none; background-color: var(--blue);
+			padding:  20px 50px; border-radius: 5px;
+			font-size: 1.25rem;
+			margin-top: 70px;
+			height: auto !important;
+
+			transition: 0.3s;
+		 }
+		 #mypage .btn_submit:hover{
+			background-color: var(--blue-hover);
+		 }
+
+
+
+
+
+
+/* 
+################################################################
+#################################################################
+#################################################################
+*/
+
+@media screen and (max-width:1500px){
+	#mypage .wrapper{
+		width: 90%;
+	}
+}
+@media screen and (max-width:1280px){
+	.tit_banner{
+		padding-top: 0;
+	}
+
+	#mypage .dashboard .board_right .search_box .search_date{
+		gap:19px;
+	}
+
+
+	#mypage #profile .profile .img_box{
+		width: 145px; height: 145px;
+	}
+}
+@media screen and (max-width:1200px){
+	.tit_banner .background .wrapper{
+		padding: 87px 0 97px;
+	}
+	#mypage .select_btn{
+		font-size: 13px;
+		gap:4px;
+	}
+
+	#mypage .dashboard .board_right .search_box fieldset label{font-size: 13px;}
+	#mypage .dashboard .board_right .search_box .search_date{
+		gap: 13px;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		padding-top:10px;
+	}
+	#mypage .history_table .tbody .td_num{
+		padding-top: 10px;
+	}
+	#mypage .history_table .tbody .td_package{
+		padding-top:10px;
+	}
+	#mypage .history_table .tbody .td_amount{
+		padding-top: 10px;
+	}
+	#mypage .dashboard .board_left .dashboard_nav li a{
+		padding: 30px 26px;
+	}
+}
+
+@media screen and (max-width:1024px){
+	#mypage .dashboard .board_right{
+		width: 75%;
+	}
+
+	#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+		width: 409px;
+	}
+	#mypage .dashboard .board_right .search_box .search_date{
+		display: block;
+	}
+	#mypage .dashboard .board_right .search_box fieldset label{
+		font-size: 18px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 31.5px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn{
+		margin: 15px 0 20px 0;
+	}
+	#mypage .select_btn{
+		gap: 15px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 170px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-left: 18px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset:not(:last-of-type){
+		margin-bottom: 25px;
+	}
+	#mypage .history_table .thead span{
+		font-size: 0.9rem;
+	}
+	#mypage .history_table li span{
+		font-size: 0.85rem;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		width: 28%;
+	}
+	#mypage .history_table .thead .th_order_num{
+		width: 28%;
+	}
+	#mypage .history_table .thead .th_package{
+		width: 24%;
+	}
+	#mypage .history_table .tbody .td_package{
+		width: 24%;
+	}
+}
+
+@media screen and (max-width:800px){
+
+	#mypage .dashboard .board_right .search_box fieldset input[type=text]:not(.datepicker){
+		width: 81%;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 22.5px;
+		font-size: 13px;
+	}
+	#mypage .dashboard .board_right .search_box fieldset>label{
+		width: 20%;
+	}
+	#mypage .select_btn{
+		gap: 13px;
+		width: 100%;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 134px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-left: 4px;
+	}
+	#mypage .history_table_wrap{
+		overflow: scroll;
+	}
+	#mypage .history_table{
+		width: 900px;
+	}
+	#mypage .history_table .tbody .td_num{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_order_num{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_package{
+		padding-top: 0;
+	}
+	#mypage .history_table .tbody .td_amount{
+		padding-top: 0;
+	}
+
+}
+
+@media screen and (max-width:600px){
+	.tit_banner .background .wrapper{
+		padding: 40px 0 41px;
+	}
+	.tit_banner .background .txt_box h2{
+		font-size: 2rem;
+	}
+	.tit_banner .background .txt_box p{
+		margin-top: 16px;
+	}
+	.tit_banner .background .icn_box i{
+		width: 75% !important;
+		height: 75% !important;
+		background-size: auto 100% !important;
+	}
+
+	#mypage .dashboard .board_right{
+		width: 100%;
+	}
+
+	#mypage .dashboard{
+		display: block;
+	}
+
+	
+
+}
+
+@media screen and (max-width:500px){
+	#mypage .dashboard .board_right .tit_box h2{
+		font-size: 1.8rem;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 17.5px;
+	}
+	#mypage .select_btn{
+		gap: 3px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 215px;
+		height: 40px;
+		margin-bottom: 15px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		width: 40px;
+		height: 40px;
+		margin-top: -16px;
+	}
+	#mypage{
+		padding: 80px 0 100px;
+	}
+	
+}
+@media screen and (max-width:480px){
+	.tit_banner .background .icn_box{
+		width: 60%;
+		height: 60%;
+		opacity: 1;
+		background-size: auto 100%;
+	}
+	#mypage .dashboard .board_right{
+		padding: 50px 25px;
+	}
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		padding: 10px 15.5px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		margin-bottom: 11px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date > img{
+		margin-top: -14px;
+	}
+	#mypage .history_table{
+		width: 845px;
+	}
+
+	#mypage .dashboard .board_right #profile{
+		padding: 0;
+	}
+	#mypage .dashboard .board_right #profile table tr{
+		display: flex; flex-direction: column;
+		justify-content: center; align-items: center;
+	}
+	#mypage .dashboard .board_right #profile table tr th{
+		width: 100%; padding-left: 0 !important;
+		text-align: center;
+	}
+
+	#mypage #profile .profile .img_box{
+		margin: 0 auto;
+	}
+
+	#mypage #profile .profile th, #mypage #profile .profile td{
+		text-align: center;
+	}
+
+	#mypage .dashboard .board_right #profile input:not([type=file]):not([type=submit]){
+		width: 215px;
+	}
+
+	#mypage #profile th, #mypage #profile td {
+		padding: 10px 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	#mypage .btn_submit{
+		margin-top: 35px; margin-bottom: 60px;
+	}
+
+	input.frm_input {
+		width: 80% !important;
+	}
+
+	#mypage #profile .profile .img_box{
+		width: 120px; height: 120px;
+	}
+
+}
+
+@media screen and (max-width:390px){
+	#mypage .dashboard .board_right .search_box .select_btn .form_radio_btn label{
+		font-size: 11px;
+		padding: 10px 14.5px;
+	}
+	#mypage .dashboard .board_right .search_box .select_date input{
+		width: 193px;
+	}
+	#mypage .dashboard .board_right .tit_box h2{
+		font-size: 1.2rem;
+	}
+	#mypage .dashboard .board_right .tit_box h2 i{
+		width: 27px;
+		height: 17px;
+	}
+	#mypage .dashboard .board_right .desc{
+		font-size: 0.7rem;
+	}
+
+}
